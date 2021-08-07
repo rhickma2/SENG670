@@ -26,11 +26,12 @@ You need to travel to all of these cities to solve critical Systems Engineering 
 
 
 
-[[Boston Logan]] //You need to go here right now.//
-[[London Heathrow]]
-[[Atlanta Hartsfield-Jackson]]
-[[Orlando International]]
-[[Los Angeles International]]
+(if: $CitiesVisited&#39;s Boston is $visitedNo)[ [[Boston Logan]] //You need to go here right now.//]
+(if: $CitiesVisited&#39;s London is $visitedNo)[ [[London Heathrow]] ]
+(if: $CitiesVisited&#39;s Atlanta is $visitedNo)[ [[Atlanta Hartsfield-Jackson]] ]
+(if: $CitiesVisited&#39;s Orlando is $visitedNo)[ [[Orlando International]] ]
+(if: $CitiesVisited&#39;s LosAngeles is $visitedNo)[ [[Los Angeles International]] ]
+
 
 
 
@@ -40,38 +41,50 @@ Since you wasted Col Gates&#39; time looking for jobs counting elk, your Systems
 So, I suppose we&#39;re off to Dulles! Maybe we can stop at Five Guys in the terminal.
 (set: $ExtraWorkload to true)
 [[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="4" name="Boston Logan" tags="" position="29,470" size="100,100">Welcome to Boston! Go Pats! Get ya lahge Regulah Dunkies and lets go!
+(if: visits is 1)[(set: $bostonT1cmplt to false)(set: $bostonT2cmplt to false)(set: $bostonT3cmplt to false)]
 
 You must complete three tasks while here in Boston. After completing the three tasks, you should travel back to Dulles for another assignment.
 
 Go to your task list:
-[[Boston Task 1]]
-[[Boston Task 2]]
-[[Boston Task 3]] //You should pick this one!//
+(if: $bostonT1cmplt is false)[Go to [[Boston Task 1]] ]
+(if: $bostonT2cmplt is false)[Go to [[Boston Task 2]] ]
+(if: $bostonT3cmplt is false)[Go to [[Boston Task 3]]  //You should pick this one!//]
 
-[[I&#39;m done in Boston]]</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="179,470" size="100,100">Welcome to London!
+[[I&#39;m done in Boston]]
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="179,470" size="100,100">Welcome to London!
 
 [[London Task 1]]
 [[London Task 2]]
 [[London Task 3]]
 
 [[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="345,468" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Orlando International" tags="" position="479,470" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Los Angeles International" tags="" position="634,470" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Where in the SPO?" tags="" position="208,145" size="100,100">Where in the SPO is Systems Engineering?
+(set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
-(set: $ClueArray to (a:&quot;No clues yet&quot;,&quot;No really&quot;))(set: $CitiesVisited to (dm:&quot;Boston&quot;,false,&quot;London&quot;,false,&quot;Atlanta&quot;,false,&quot;Orlando&quot;,false,&quot;LosAngeles&quot;,false))
+(set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
+&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedNo,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo))
 
 Begin your quest!
 [[Calling all Systems Engineers]] </tw-passagedata><tw-passagedata pid="10" name="Boston Task 1" tags="" position="56,1133" size="100,100">(set: $bostonClue2 to 0)
 Accomplish this task!
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="11" name="Boston Task 2" tags="" position="109,1255" size="100,100">(set: $bostonClue2 to 0)
+(if:visits &gt;= 1)[(set: $bostonT1cmplt to true)]
+
+Go back to the airport. You cannot come back to this task!
+[[Boston Logan]]</tw-passagedata><tw-passagedata pid="11" name="Boston Task 2" tags="" position="109,1255" size="100,100">(set: $bostonClue2 to 0)
 Accomplish this task!
 
+(if:visits &gt;= 1)[(set: $bostonT2cmplt to true)]
 
+Go back to the airport. You cannot come back to this task!
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="12" name="Boston Task 3" tags="" position="173,1376" size="100,100">(set: $bostonClue3 to 0)
 Oh no! The prime contractor is having difficulty getting the inventory control computer to communicate with the warehouse distribution machinery. What should the systems engineering team investigate to solve this problem? 
 
 a) Has inventory control computer been validated against the user requirements? [[Boston - 3.1 - Computer Validation]]
 b) Have the information system interfaces (hardware and software) been defined and documented? [[Boston - 3.2 - Interface Design]]
 c) Has the warehouse machinery been verified to produce packaged MREs at the specified rate? [[Boston - 3.3 - Machinery Verification]] 
+
+(if:visits &gt;= 1)[(set: $bostonT3cmplt to true)]
 
 Go back to the airport:
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="13" name="MyDashboard" tags="" position="681,145" size="100,100">
@@ -119,23 +132,29 @@ Good choice. You should bring this up with the developers.
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="22" name="Boston - 3.2.3 - Fire Them All" tags="" position="513,1665" size="100,100">(set: $bostonClue3 to 0)
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="23" name="I&#39;m done in Boston" tags="" position="86,319" size="100,100">&lt;-- //Some debug stuff. We need to determine how well the player did in Boston.//
-Task 1 result dummy value: (set: $bostonClue1 to 0)
-Task 2 result dummy value: (set: $bostonClue2 to 1)
-Task 3 result dummy value: (set: $bostonClue3 to 1)
-
-(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
-
-(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: $bostonClue to &quot;This is something correct.&quot;)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="23" name="I&#39;m done in Boston" tags="" position="86,319" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
+(set: _bostonClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _bostonClue to &quot;This is something correct.&quot;)
 ]
 (else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $bostonClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
-//Now, here is what they see.// --&gt;
-
+(set: _bostonClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
 Okay, you are done in Boston. Your clue is:
-(print: $bostonClue)
+(print: _bostonClue)
 
-[[Travel to Dulles]] </tw-passagedata></tw-storydata>
+(set: $ClueArray to $ClueArray + (a: _bostonClue))
+(set: $CitiesVisited&#39;s Boston to $visitedYes)
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="24" name="Debug Header" tags="debug-header" position="810.0000000000001,142.50000000000003" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
+(set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
+(set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
+&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedYes,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo))
+(set: $bostonClue1 to 0)
+(set: $bostonClue2 to 1)
+(set: $bostonClue3 to 1)}
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
