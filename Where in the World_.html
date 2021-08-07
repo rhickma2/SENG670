@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Where in the World?.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Where in the World?" startnode="9" creator="Twine" creator-version="2.3.14" ifid="8BCFD8DD-97CA-4493-B91C-0A40A6CA42BA" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Calling all Systems Engineers" tags="" position="404,170" size="100,100">&#39;&#39;Welcome to the (print: $programName) Program Management Office!&#39;&#39;
+<tw-storydata name="Where in the World?" startnode="8" creator="Twine" creator-version="2.3.14" ifid="8BCFD8DD-97CA-4493-B91C-0A40A6CA42BA" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Calling all Systems Engineers" tags="" position="2024,290" size="100,100">&#39;&#39;Welcome to the (print: $programName) Program Management Office!&#39;&#39;
 
 Where in the SPO is Systems Engineering?
 //I can&#39;t find it anywhere!//
@@ -19,7 +19,7 @@ The crime syndicate NST (Non-Systems Thinkers) is trying to ensure we have a sub
 Col Della Gates, our (print: $programName) Program Manager, needs your help! She has asked that any available Systems Engineer immediately go to Dulles airport for orders.
 (set: $ExtraWorkload to false)
 [[Travel to Dulles]]
-[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="329,320" size="100,100">Welcome to Dulles!
+[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="1973,588" size="100,100">Welcome to Dulles!
 //I wonder who engineered those all-terrain trolleys that connect the terminals to the airplanes?//
 &#39;&#39;Quit getting distracted&#39;&#39;! Your program will be cancelled if you can&#39;t find the NST crooks!
 You need to travel to all of these cities to solve critical Systems Engineering problems for the (print: $programName) program.
@@ -30,17 +30,17 @@ You need to travel to all of these cities to solve critical Systems Engineering 
 (if: $CitiesVisited&#39;s London is $visitedNo)[ [[London Heathrow]] ]
 (if: $CitiesVisited&#39;s Atlanta is $visitedNo)[ [[Atlanta Hartsfield-Jackson]] ]
 (if: $CitiesVisited&#39;s Orlando is $visitedNo)[ [[Orlando International]] ]
-(if: $CitiesVisited&#39;s LosAngeles is $visitedNo)[ [[Los Angeles International]] ]
 
 
 
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="3" name="Visit USAJobs.com for an alternative career in the Forestry Service" tags="" position="657,318" size="100,100">Oh. Well this awkard...
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="3" name="Visit USAJobs.com for an alternative career in the Forestry Service" tags="" position="2313,298" size="200,100">Oh. Well this awkard...
 Those cush jobs with the US Forestry Service in Montana were all taken. Turns out, you needed a degree in Biology or Forestry anyway. Your Systems Engineering education would have been of little use.
 Since you wasted Col Gates&#39; time looking for jobs counting elk, your Systems Engineering workload has increased a little bit.
 So, I suppose we&#39;re off to Dulles! Maybe we can stop at Five Guys in the terminal.
 (set: $ExtraWorkload to true)
-[[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="4" name="Boston Logan" tags="" position="29,470" size="100,100">Welcome to Boston! Go Pats! Get ya lahge Regulah Dunkies and lets go!
+[[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="4" name="Boston Logan" tags="" position="1193,851" size="100,100">Welcome to Boston! Go Pats! Get ya lahge Regulah Dunkies and lets go!
 (if: visits is 1)[(set: $bostonT1cmplt to false)(set: $bostonT2cmplt to false)(set: $bostonT3cmplt to false)]
 
 You must complete three tasks while here in Boston. After completing the three tasks, you should travel back to Dulles for another assignment.
@@ -52,32 +52,62 @@ Go to your task list:
 
 [[I&#39;m done in Boston]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="179,470" size="100,100">Welcome to London!
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="2032,1591" size="100,100">Welcome to London! We really should stop and say cheerio to the Queen...  There&#39;s no time for that!  The NST syndicate is well on their way to ruining our program!
+(if: visits is 1)[(set: $londonT1cmplt to false)(set: $londonT2cmplt to false)(set: $london3cmplt to false)]
 
-[[London Task 1]]
-[[London Task 2]]
-[[London Task 3]]
+You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
 
-[[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="345,468" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Orlando International" tags="" position="479,470" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Los Angeles International" tags="" position="634,470" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Where in the SPO?" tags="" position="208,145" size="100,100">Where in the SPO is Systems Engineering?
+Go to your task list:
+(if: $londonT1cmplt is false)[Go to [[London  Task 1]] ]
+(if: $londonT2cmplt is false)[Go to [[London  Task 2]] ]
+(if: $londonT3cmplt is false)[Go to [[London  Task 3]]  //You should pick this one!//]
+
+[[I&#39;m done in London]]
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="2791,1564" size="100,100">Welcome to Atlanta! Time to hit Krystal&#39;s for some sliders?  NO WAY, the NST no-gooders are ruining the program!
+(if: visits is 1)[(set: $atlantaT1cmplt to false)(set: $atlantaT2cmplt to false)(set: $atlanta3cmplt to false)]
+
+You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
+
+Go to your task list:
+(if: $atlantaT1cmplt is false)[Go to [[Atlanta  Task 1]] ]
+(if: $atlantaT2cmplt is false)[Go to [[Atlanta  Task 2]] ]
+(if: $atlantaT3cmplt is false)[Go to [[Atlanta  Task 3]]  //You should pick this one!//]
+
+[[I&#39;m done in Atlanta]]
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="7" name="Orlando International" tags="" position="3266,662" size="200,100">Welcome to Orlando! Look, DisneyWorld just isn&#39;t that cool...WE&#39;RE NOT GOING, the NST is well on their way to ruining this program, step it up and quit getting distracted... &quot;is that an aligator over there?!&quot; *splap* C&#39;MON!
+(if: visits is 1)[(set: $OrlandoT1cmplt to false)(set: $OrlandoT2cmplt to false)(set: $Orlando3cmplt to false)]
+
+You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
+
+Go to your task list:
+(if: $orlandoT1cmplt is false)[Go to [[Orlando  Task 1]] ]
+(if: $orlandoT2cmplt is false)[Go to [[Orlando  Task 2]] ]
+(if: $orlandoT3cmplt is false)[Go to [[Orlando  Task 3]]  //You should pick this one!//]
+
+[[I&#39;m done in Orlando]]
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="2020,77" size="100,100">Where in the SPO is Systems Engineering?
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
 (set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
-&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedNo,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo))
+&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedNo,&quot;Orlando&quot;,$visitedNo))
 
 Begin your quest!
-[[Calling all Systems Engineers]] </tw-passagedata><tw-passagedata pid="10" name="Boston Task 1" tags="" position="56,1133" size="100,100">(set: $bostonClue2 to 0)
+[[Calling all Systems Engineers]] </tw-passagedata><tw-passagedata pid="9" name="Boston Task 1" tags="" position="793,1064" size="100,100">(set: $bostonClue2 to 0)
 Accomplish this task!
 
 (if:visits &gt;= 1)[(set: $bostonT1cmplt to true)]
 
 Go back to the airport. You cannot come back to this task!
-[[Boston Logan]]</tw-passagedata><tw-passagedata pid="11" name="Boston Task 2" tags="" position="109,1255" size="100,100">(set: $bostonClue2 to 0)
+[[Boston Logan]]</tw-passagedata><tw-passagedata pid="10" name="Boston Task 2" tags="" position="1109,1078" size="100,100">(set: $bostonClue2 to 0)
 Accomplish this task!
 
 (if:visits &gt;= 1)[(set: $bostonT2cmplt to true)]
 
 Go back to the airport. You cannot come back to this task!
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="12" name="Boston Task 3" tags="" position="173,1376" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="11" name="Boston Task 3" tags="" position="1438,1063" size="100,100">(set: $bostonClue3 to 0)
 Oh no! The prime contractor is having difficulty getting the inventory control computer to communicate with the warehouse distribution machinery. What should the systems engineering team investigate to solve this problem? 
 
 a) Has inventory control computer been validated against the user requirements? [[Boston - 3.1 - Computer Validation]]
@@ -87,20 +117,20 @@ c) Has the warehouse machinery been verified to produce packaged MREs at the spe
 (if:visits &gt;= 1)[(set: $bostonT3cmplt to true)]
 
 Go back to the airport:
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="13" name="MyDashboard" tags="" position="681,145" size="100,100">
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="12" name="MyDashboard" tags="" position="1551,75" size="200,100">
 ---
 Cities Visited:
 (print: $CitiesVisited)
 Your clues:
 (print: $ClueArray)
-</tw-passagedata><tw-passagedata pid="14" name="London Task 1" tags="" position="376,681" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="London Task 2" tags="" position="490,768" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="London Task 3" tags="" position="555,888" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Boston - 3.1 - Computer Validation" tags="" position="236,1517" size="100,100">(set: $bostonClue3 to 0)
+</tw-passagedata><tw-passagedata pid="13" name="Boston - 3.1 - Computer Validation" tags="" position="1393,1288" size="100,100">(set: $bostonClue3 to 0)
 System validation describes tests to determine whether a system meets the intended user requirements. Validation assesses &quot;was the right system built?&quot;. System //verification// determines whether a system or component was built to a design specification. Verification assesses &quot;was the system built right?&quot;.
 
 The inventory control computer was designed using significant user input. Users got to experiment with human-system interfaces in a systems integration lab (SIL), before the computer was every connected to actual warehouse equipment. User feedback was positive. Eventually, dedicated government operational test (OT) will assess whether the (print: $programName) is //effective// and //suitable// with respect to the original operational requirements.
 
 We still do not know why the inventory control computer does not correctly communicate with the warehouse machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2 - Interface Design" tags="" position="363,1515" size="100,100">(set: $bostonClue3 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="14" name="Boston - 3.2 - Interface Design" tags="" position="1500,1282" size="100,100">(set: $bostonClue3 to 1)
 You want to validate the computer/machinery interface? When building systems-of-systems, engineers should manage at the interfaces. 
 
 blah, blah, blah what is good interface design...
@@ -114,7 +144,7 @@ b) Meet with computer designers to determine whether this was an unintentional b
 c) Fire the computer design team and start over. [[Boston - 3.2.3 - Fire Them All]]
 
 [[Boston Logan]] 
-</tw-passagedata><tw-passagedata pid="19" name="Boston - 3.3 - Machinery Verification" tags="" position="483,1515" size="100,100">(set: $bostonClue3 to 0)
+</tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="1612,1286" size="100,100">(set: $bostonClue3 to 0)
 System verification involves evaluating a system&#39;s compliance to a design specification. For example, you might assess whether a manufactured 30mm bolt measures to 30mm within some stated manufacturing tolerance.
 
 A verified system usually meets its design requirements, but may not always meet the intended user requirements. System //validation// tests whether a system achieves its stated user requirements.
@@ -123,16 +153,16 @@ The MRE distribution machinery has many design specifications. The machine manuf
 
 We still don&#39;t know why the inventory control computer is unable to communicate with the machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="20" name="Boston - 3.2.1 - Redesign Interface" tags="" position="215,1665" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="16" name="Boston - 3.2.1 - Redesign Interface" tags="" position="1270,1519" size="100,100">(set: $bostonClue3 to 0)
 Bad choice.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="21" name="Boston - 3.2.2 - Computer Designers" tags="" position="366,1665" size="100,100">(set: $bostonClue3 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="17" name="Boston - 3.2.2 - Computer Designers" tags="" position="1394,1515" size="100,100">(set: $bostonClue3 to 1)
 Good choice. You should bring this up with the developers.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="22" name="Boston - 3.2.3 - Fire Them All" tags="" position="513,1665" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2.3 - Fire Them All" tags="" position="1547,1521" size="100,100">(set: $bostonClue3 to 0)
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="23" name="I&#39;m done in Boston" tags="" position="86,319" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m done in Boston" tags="" position="1673,407" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
 (set: _bostonClue to &quot;&quot;)
 (if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _bostonClue to &quot;This is something correct.&quot;)
 ]
@@ -147,14 +177,59 @@ Okay, you are done in Boston. Your clue is:
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="24" name="Debug Header" tags="debug-header" position="810.0000000000001,142.50000000000003" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="1786,65" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
 &quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedYes,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo))
 (set: $bostonClue1 to 0)
 (set: $bostonClue2 to 1)
 (set: $bostonClue3 to 1)}
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="21" name="I&#39;m done in London" tags="" position="1781,799" size="100,100">{(set: _allClues to $londonClue1 + $londonClue2 + $londonClue3)
+(set: _londonClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _londonClue to &quot;This is something correct.&quot;)
+]
+(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
+(set: _londonClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
+Okay, you are done in Boston. Your clue is:
+(print: _londonClue)
+
+(set: $ClueArray to $ClueArray + (a: _londonClue))
+(set: $CitiesVisited&#39;s London to $visitedYes)
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="2206,852" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
+(set: _atlantaClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _atlantaClue to &quot;This is something correct.&quot;)
+]
+(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
+(set: _atlantaClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
+Okay, you are done in Boston. Your clue is:
+(print: _atlantaClue)
+
+(set: $ClueArray to $ClueArray + (a: _atlantaClue))
+(set: $CitiesVisited&#39;s Atlanta to $visitedYes)
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="23" name="London  Task 2" tags="" position="2017,1766" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="London  Task 3" tags="" position="2192,1771" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1" tags="" position="2641,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Atlanta  Task 2" tags="" position="2791,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Atlanta  Task 3" tags="" position="2941,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="Orlando  Task 1" tags="" position="3041,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Orlando  Task 2" tags="" position="3191,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Orlando  Task 3" tags="" position="3341,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="I&#39;m done in Orlando" tags="" position="2466,630" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
+(set: _orlandoClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _orlandoClue to &quot;This is something correct.&quot;)
+]
+(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
+(set: _orlandoClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
+Okay, you are done in Orlando. Your clue is:
+(print: _orlandoClue)
+
+(set: $ClueArray to $ClueArray + (a: _orlandoClue))
+(set: $CitiesVisited&#39;s Orlando to $visitedYes)
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="32" name="London  Task 1" tags="" position="1846,1771" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
