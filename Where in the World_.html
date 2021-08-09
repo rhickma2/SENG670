@@ -52,8 +52,8 @@ Go to your task list:
 
 [[I&#39;m done in Boston]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="2032,1591" size="100,100">Welcome to London! We really should stop and say cheerio to the Queen...  There&#39;s no time for that!  The NST syndicate is well on their way to ruining our program!
-(if: visits is 1)[(set: $londonT1cmplt to false)(set: $londonT2cmplt to false)(set: $london3cmplt to false)]
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="5" name="London Heathrow" tags="" position="2030.3333333333333,1592.6666666666667" size="100,100">Welcome to London! We really should stop and say cheerio to the Queen...  There&#39;s no time for that!  The NST syndicate is well on their way to ruining our program!
+(if: visits is 1)[(set: $londonT1cmplt to false)(set: $londonT2cmplt to false)(set: $londonT3cmplt to false)]
 
 You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
 
@@ -64,10 +64,10 @@ Go to your task list:
 
 [[I&#39;m done in London]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="2791,1564" size="100,100">Welcome to Atlanta! Time to hit Krystal&#39;s for some sliders?  NO WAY, the NST no-gooders are ruining the program!
-(if: visits is 1)[(set: $atlantaT1cmplt to false)(set: $atlantaT2cmplt to false)(set: $atlanta3cmplt to false)]
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="2739.3333333333335,1107.3333333333333" size="100,100">Welcome to Atlanta! Time to hit Krystal&#39;s for some sliders?  NO WAY, the NST no-gooders are ruining the program!
+(if: visits is 1)[(set: $atlantaT1cmplt to false)(set: $atlantaT2cmplt to false)(set: $atlantaT3cmplt to false)]
 
-You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
+You must complete three tasks while here in Atlanta. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
 
 Go to your task list:
 (if: $atlantaT1cmplt is false)[Go to [[Atlanta  Task 1]] ]
@@ -76,15 +76,15 @@ Go to your task list:
 
 [[I&#39;m done in Atlanta]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="7" name="Orlando International" tags="" position="3266,662" size="200,100">Welcome to Orlando! Look, DisneyWorld just isn&#39;t that cool...WE&#39;RE NOT GOING, the NST is well on their way to ruining this program, step it up and quit getting distracted... &quot;is that an aligator over there?!&quot; *splap* C&#39;MON!
-(if: visits is 1)[(set: $OrlandoT1cmplt to false)(set: $OrlandoT2cmplt to false)(set: $Orlando3cmplt to false)]
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="7" name="Orlando International" tags="" position="3264.3333333333335,662" size="200,100">Welcome to Orlando! Look, DisneyWorld just isn&#39;t that cool...WE&#39;RE NOT GOING, the NST is well on their way to ruining this program, step it up and quit getting distracted... &quot;is that an aligator over there?!&quot; *slap* C&#39;MON!
+(if: visits is 1)[(set: $OrlandoT1cmplt to false)(set: $OrlandoT2cmplt to false)(set: $OrlandoT3cmplt to false)]
 
-You must complete three tasks while here in London. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
+You must complete three tasks while here in Orlando. After completing the three tasks, you should travel back to Dulles for another assignment. 
 
 Go to your task list:
-(if: $orlandoT1cmplt is false)[Go to [[Orlando  Task 1]] ]
-(if: $orlandoT2cmplt is false)[Go to [[Orlando  Task 2]] ]
-(if: $orlandoT3cmplt is false)[Go to [[Orlando  Task 3]]  //You should pick this one!//]
+(if: $OrlandoT1cmplt is false)[Go to [[Orlando  Task 1]] ]
+(if: $OrlandoT2cmplt is false)[Go to [[Orlando  Task 2]] ]
+(if: $OrlandoT3cmplt is false)[Go to [[Orlando  Task 3]]  //You should pick this one!//]
 
 [[I&#39;m done in Orlando]]
 
@@ -109,7 +109,7 @@ What is going on? How can we get to the bottom of this?
 [[Boston - 1.3 - Model the Problem]]
 
 Go back to the airport. You cannot come back to this task!
-[[Boston Logan]]</tw-passagedata><tw-passagedata pid="10" name="Boston Task 2" tags="" position="1100.6666666666667,1391.3333333333335" size="100,100">(set: $bostonClue2 to 0)(if:visits &gt;= 1)[(set: $bostonT2cmplt to true)]
+[[Boston Logan]]</tw-passagedata><tw-passagedata pid="10" name="Boston Task 2" tags="" position="1100,1391" size="100,100">(set: $bostonClue2 to 0)(if:visits &gt;= 1)[(set: $bostonT2cmplt to true)]
 
 One thing you&#39;ve been a little uncertain about is how the (print: $programName) system takes orders. TastyTroopTreats, Inc., the system developer, wants a cloud-based inventory management and order system. Troops will even be able up-vote and down-vote particular MRE flavors to help Uncle Sam know what to order next time**. 
 
@@ -141,14 +141,14 @@ Cities Visited:
 (print: $CitiesVisited)
 Your clues:
 (print: $ClueArray)
-</tw-passagedata><tw-passagedata pid="13" name="Boston - 3.1 - Computer Validation" tags="" position="1393,1288" size="100,100">(set: $bostonClue3 to 0)
+</tw-passagedata><tw-passagedata pid="13" name="Boston - 3.1 - Computer Validation" tags="" position="1281.3333333333333,1208" size="100,100">(set: $bostonClue3 to 0)
 System validation describes tests to determine whether a system meets the intended user requirements. Validation assesses &quot;was the right system built?&quot;. System //verification// determines whether a system or component was built to a design specification. Verification assesses &quot;was the system built right?&quot;.
 
 The inventory control computer was designed using significant user input. Users got to experiment with human-system interfaces in a systems integration lab (SIL), before the computer was every connected to actual warehouse equipment. User feedback was positive. Eventually, dedicated government operational test (OT) will assess whether the (print: $programName) is //effective// and //suitable// with respect to the original operational requirements.
 
 We still do not know why the inventory control computer does not correctly communicate with the warehouse machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="14" name="Boston - 3.2 - Interface Design" tags="" position="1500,1282" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="14" name="Boston - 3.2 - Interface Design" tags="" position="1433.3333333333333,1202" size="100,100">(set: $bostonClue3 to 0)
 You want to validate the computer/machinery interface? When building systems-of-systems, engineers should manage at the interfaces. 
 
 blah, blah, blah what is good interface design...
@@ -162,7 +162,7 @@ b) Meet with computer designers to determine whether this was an unintentional b
 c) Fire the computer design team and start over. [[Boston - 3.2.3 - Fire Them All]]
 
 [[Boston Logan]] 
-</tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="1612,1286" size="100,100">(set: $bostonClue3 to 0)
+</tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="1578.6666666666667,1201" size="100,100">(set: $bostonClue3 to 0)
 System verification involves evaluating a system&#39;s compliance to a design specification. For example, you might assess whether a manufactured 30mm bolt measures to 30mm within some stated manufacturing tolerance.
 
 A verified system usually meets its design requirements, but may not always meet the intended user requirements. System //validation// tests whether a system achieves its stated user requirements.
@@ -171,13 +171,13 @@ The MRE distribution machinery has many design specifications. The machine manuf
 
 We still don&#39;t know why the inventory control computer is unable to communicate with the machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="16" name="Boston - 3.2.1 - Redesign Interface" tags="" position="1270,1519" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="16" name="Boston - 3.2.1 - Redesign Interface" tags="" position="1308.3333333333333,1385.6666666666667" size="100,100">(set: $bostonClue3 to 0)
 Bad choice.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="17" name="Boston - 3.2.2 - Computer Designers" tags="" position="1394,1515" size="100,100">(set: $bostonClue3 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="17" name="Boston - 3.2.2 - Computer Designers" tags="" position="1430.6666666666667,1385" size="100,100">(set: $bostonClue3 to 1)
 Good choice. You should bring this up with the developers.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2.3 - Fire Them All" tags="" position="1547,1521" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2.3 - Fire Them All" tags="" position="1572,1391" size="100,100">(set: $bostonClue3 to 0)
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m done in Boston" tags="" position="1673,407" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
@@ -224,7 +224,7 @@ Okay, you are done in Boston. Your clue is:
 (else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
 (set: _atlantaClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
 }
-Okay, you are done in Boston. Your clue is:
+Okay, you are done in Atlanta. Your clue is:
 (print: _atlantaClue)
 
 (set: $ClueArray to $ClueArray + (a: _atlantaClue))
@@ -232,7 +232,61 @@ Okay, you are done in Boston. Your clue is:
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="23" name="London  Task 2" tags="" position="2017,1766" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="London  Task 3" tags="" position="2192,1771" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1" tags="" position="2641,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Atlanta  Task 2" tags="" position="2791,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Atlanta  Task 3" tags="" position="2941,1714" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="Orlando  Task 1" tags="" position="3041,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Orlando  Task 2" tags="" position="3191,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Orlando  Task 3" tags="" position="3341,812" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="I&#39;m done in Orlando" tags="" position="2466,630" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="23" name="London  Task 2" tags="" position="2032,1714.3333333333333" size="100,100">Story goes here
+
+
+
+
+[[London - 2.1]]
+[[London - 2.2]]
+[[London - 2.3]]</tw-passagedata><tw-passagedata pid="24" name="London  Task 3" tags="" position="2258.666666666667,1637.6666666666667" size="100,100">Story goes here
+
+
+
+
+[[London - 3.1]]
+[[London - 3.2]]
+[[London - 3.3]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1" tags="" position="2427.6666666666665,1195.6666666666665" size="100,100">Story goes here
+
+
+
+[[Atlanta - 1.1]]
+[[Atlanta - 1.2]]
+[[ATlanta - 1.3]]</tw-passagedata><tw-passagedata pid="26" name="Atlanta  Task 2" tags="" position="2734.3333333333335,1434" size="100,100">Story goes here
+
+
+
+[[Atlanta - 2.1]]
+[[Atlanta - 2.2]]
+[[Atlanta - 2.3]]</tw-passagedata><tw-passagedata pid="27" name="Atlanta  Task 3" tags="" position="3034.3333333333335,1199" size="100,100">Story goes here
+
+
+
+
+[[Atlanta - 3.1]]
+[[Atlanta - 3.2]]
+[[Atlanta - 3.3]]</tw-passagedata><tw-passagedata pid="28" name="Orlando  Task 1" tags="" position="3039.3333333333335,698.6666666666666" size="100,100">Story goes here
+
+
+
+
+[[Orlando - 1.1]]
+[[Orlando - 1.2]]
+[[Orlando - 1.3]]</tw-passagedata><tw-passagedata pid="29" name="Orlando  Task 2" tags="" position="3331,970.3333333333334" size="100,100">Story goes here
+
+
+
+
+[[Orlando - 2.1]]
+[[Orlando - 2.2]]
+[[Orlando - 2.3]]</tw-passagedata><tw-passagedata pid="30" name="Orlando  Task 3" tags="" position="3674.3333333333335,712" size="100,100">Story goes here
+
+
+
+
+[[Orlando - 3.1]]
+[[Orlando - 3.2]]
+[[Orlando - 3.3]]</tw-passagedata><tw-passagedata pid="31" name="I&#39;m done in Orlando" tags="" position="2466,630" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
 (set: _orlandoClue to &quot;&quot;)
 (if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _orlandoClue to &quot;This is something correct.&quot;)
 ]
@@ -247,7 +301,16 @@ Okay, you are done in Orlando. Your clue is:
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="32" name="London  Task 1" tags="" position="1846,1771" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="679.6666666666666,1287.3333333333333" size="100,100">(set: $bostonClue1 to 0)
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="32" name="London  Task 1" tags="" position="1841,1637.6666666666667" size="100,100">Story goes here
+
+
+
+
+
+
+[[London - 1.1]]
+[[London - 1.2]]
+[[London - 1.3]]</tw-passagedata><tw-passagedata pid="33" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="632.3333333333334,1198.6666666666667" size="100,100">(set: $bostonClue1 to 0)
 
 You know, we should have the technician try her magic. This machinery was designed to precision, so it&#39;s gotta be some simple hardware problem. Could be some wire connected to the wrong place, or a bad capacitor.
 
@@ -258,12 +321,12 @@ You: &quot;Hmm. That wasn&#39;t the answer I was hoping for. I should rethink th
 
 Let&#39;s reconsider. [[Boston Task 1]] 
 
-This problem is too hard. Back to the airport. [[Boston Logan]] </tw-passagedata><tw-passagedata pid="34" name="Boston - 1.2 - Dissolve the Problem" tags="" position="824.6666666666666,1280.6666666666665" size="100,100">(set: $bostonClue1 to 0)
+This problem is too hard. Back to the airport. [[Boston Logan]] </tw-passagedata><tw-passagedata pid="34" name="Boston - 1.2 - Dissolve the Problem" tags="" position="790.6666666666666,1206.6666666666667" size="100,100">(set: $bostonClue1 to 0)
 Okay, let&#39;s hope this was a fluke. Sometimes things just don&#39;t work right!
 
 Wish we could be sure this wouldn&#39;t happen again. Anyway, back to the airport.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="35" name="Boston - 1.3 - Model the Problem" tags="" position="956.3333333333334,1289" size="100,100">(set: $bostonClue1 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="35" name="Boston - 1.3 - Model the Problem" tags="" position="937.6666666666666,1210.6666666666667" size="100,100">(set: $bostonClue1 to 1)
 Interesting choice. The machine manufacturer has a digital model of the inventory distribution system. Let&#39;s call the chief systems engineer, Mr. Boyardee, at TastyTroopTreats, Inc. to see what he says.
 
 Mr Boyardee: &quot;Cliff Boyardee, TastyTroopTreats.&quot;
@@ -279,7 +342,7 @@ Jane: &quot;Yep. That&#39;s already scheduled for Thursday morning, and we plan 
 
 Awesome job, you have solved the problem!
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="36" name="Boston - 2.1 - Build That Cloud Ourselves" tags="" position="934,1512.3333333333335" size="100,100">(set: $bostonClue2 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="36" name="Boston - 2.1 - Build That Cloud Ourselves" tags="" position="944,1553.6666666666667" size="100,100">(set: $bostonClue2 to 0)
 
 Okay, we can build our own. There are some advantages. The government and TastyTroopTreats can own all of that infrastructure: servers, buildings, software. We&#39;ll make sure all of the data communications is in tip-top shape, government style!
 
@@ -288,7 +351,7 @@ But wait, isn&#39;t commercial industry pretty good at this stuff? It&#39;s not 
 Oh well. We&#39;ll ensure plenty of good jobs building and running our MRE server farms.
 
 I&#39;ve solved the problem! Back to the airport.
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="37" name="Boston - 2.2 - Use Third-Party Cloud Solution" tags="" position="1014,1653" size="100,100">(set: $bostonClue2 to 1)</tw-passagedata><tw-passagedata pid="38" name="Boston - 2.3 - Cloud is risky. Rethink the solution." tags="" position="1152.3333333333333,1594.6666666666667" size="100,100">(set: $bostonClue2 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="37" name="Boston - 2.2 - Use Third-Party Cloud Solution" tags="" position="1082.3333333333333,1553" size="100,100">(set: $bostonClue2 to 1)</tw-passagedata><tw-passagedata pid="38" name="Boston - 2.3 - Cloud is risky. Rethink the solution." tags="" position="1243.6666666666667,1554" size="100,100">(set: $bostonClue2 to 0)
 
 Cloud stuff. Sounds like a security problem waiting to happen. I agree with the old curmudgeon engineer. We need a sound solution that doesn&#39;t require some of these new technologies the Silicon Valley brainiacs are proposing.
 
@@ -297,7 +360,7 @@ How about this? Each military installation can fill out a form, once a month, th
 Yeah, okay. In high demand situations it might get tricky working with all those emails. And every so often the installation POC might be on leave, but they&#39;ll figure out a system.
 
 Problem solved! Back to the airport.
-[[Boston Logan]] </tw-passagedata></tw-storydata>
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="39" name="London - 1.1" tags="" position="1562.6666666666667,1767.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="London - 1.2" tags="" position="1712.6666666666667,1767.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="London - 1.3" tags="" position="1862.6666666666667,1767.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="42" name="London - 2.1" tags="" position="1867,1911" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="43" name="London - 2.2" tags="" position="2017,1911" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="44" name="London - 2.3" tags="" position="2167,1911" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="45" name="London - 3.1" tags="" position="2182.0000000000005,1767.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="London - 3.2" tags="" position="2307,1771.0000000000002" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="London - 3.3" tags="" position="2438.666666666667,1767.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="48" name="Atlanta - 1.1" tags="" position="2201,1342.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="Atlanta - 2.1" tags="" position="2584.3333333333335,1584" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Atlanta - 2.2" tags="" position="2734.3333333333335,1584" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="51" name="Atlanta - 2.3" tags="" position="2884.3333333333335,1584" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="52" name="Atlanta - 1.2" tags="" position="2352.6666666666665,1345.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="53" name="ATlanta - 1.3" tags="" position="2502.6666666666665,1345.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="54" name="Atlanta - 3.1" tags="" position="2884.3333333333335,1349" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="55" name="Atlanta - 3.2" tags="" position="3034.3333333333335,1349" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="56" name="Atlanta - 3.3" tags="" position="3184.3333333333335,1349" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="57" name="Orlando - 1.1" tags="" position="2881,853.6666666666666" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="58" name="Orlando - 1.2" tags="" position="3031,853.6666666666666" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="Orlando - 1.3" tags="" position="3181,853.6666666666666" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="60" name="Orlando - 2.1" tags="" position="3181,1120.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="Orlando - 2.2" tags="" position="3331,1120.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="62" name="Orlando - 2.3" tags="" position="3481,1120.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="63" name="Orlando - 3.1" tags="" position="3536,887" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="64" name="Orlando - 3.2" tags="" position="3686,887" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="65" name="Orlando - 3.3" tags="" position="3836,887" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
