@@ -40,7 +40,7 @@ Those cush jobs with the US Forestry Service in Montana were all taken. Turns ou
 Since you wasted Col Gates&#39; time looking for jobs counting elk, your Systems Engineering workload has increased a little bit.
 So, I suppose we&#39;re off to Dulles! Maybe we can stop at Five Guys in the terminal.
 (set: $ExtraWorkload to true)
-[[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="4" name="Boston Logan" tags="" position="512,295" size="100,100">Welcome to Boston! Go Pats! Get ya lahge Regulah Dunkies and lets go!
+[[Travel to Dulles]] </tw-passagedata><tw-passagedata pid="4" name="Boston Logan" tags="" position="513.6666666666666,295" size="100,100">Welcome to Boston! Go Pats! Get ya lahge Regulah Dunkies and lets go!
 (if: visits is 1)[(set: $bostonT1cmplt to false)(set: $bostonT2cmplt to false)(set: $bostonT3cmplt to false)]
 
 You must complete three tasks while here in Boston. After completing the three tasks, you should travel back to Dulles for another assignment.
@@ -64,17 +64,15 @@ Go to your task list:
 
 [[I&#39;m done in London]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="2465,753" size="100,100">Welcome to Atlanta! Time to hit Krystal&#39;s for some sliders?  NO WAY, the NST no-gooders are out to ruin the program!
-(if: visits is 1)[(set: $atlantaT1cmplt to false)(set: $atlantaT2cmplt to false)(set: $atlantaT3cmplt to false)]
-
-Downtown Atlanta hosts the College Football Hall of Fame, totally worth a visit! [Goto [[Hall of Fame]]]
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="6" name="Atlanta Hartsfield-Jackson" tags="" position="2465,753" size="100,100">(if: visits is 1)[(set: $atlantaT1cmplt to false)(set: $atlantaT2cmplt to false)(set: $atlantaT3cmplt to false)]
+Welcome to Atlanta! Time to hit Krystal&#39;s for some sliders?  NO WAY, the NST no-gooders are out to ruin the program!  There really isn&#39;t a lot in Atlanta, so we&#39;re going to stick to sports, there&#39;s some big rock somewhere, but let&#39;s be realistic, this isn&#39;t mountain country.  
 
 You must complete three tasks while here in Atlanta. After completing the three tasks, you should travel back to Dulles for another assignment. If the Concorde stuck around this would sure be faster!
 
 Go to your task list:
-(if: $atlantaT1cmplt is false)[Go to [[Atlanta  Task 1]] ]
-(if: $atlantaT2cmplt is false)[Go to [[Atlanta  Task 2]] ]
-(if: $atlantaT3cmplt is false)[Go to [[Atlanta  Task 3]]  //You should pick this one!//]
+(if: $atlantaT1cmplt is false)[Go to [[Atlanta  Task 1 CFB Hall of Fame]] ]
+(if: $atlantaT2cmplt is false)[Go to [[Atlanta  Task 2 Truist Park]] ]
+(if: $atlantaT3cmplt is false)[Go to [[Atlanta  Task 3 Falcons]]]
 
 [[I&#39;m done in Atlanta]]
 
@@ -161,7 +159,7 @@ The inventory control computer was designed using significant user input. Users 
 
 We still do not know why the inventory control computer does not correctly communicate with the warehouse machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="14" name="Boston - 3.2 - Interface Design" tags="" position="752,500" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="14" name="Boston - 3.2 - Interface Design" tags="" position="787,371.66666666666663" size="100,100">(set: $bostonClue3 to 0)
 You want to validate the computer/machinery interface? When building systems-of-systems, engineers should manage at the interfaces. 
 
 blah, blah, blah what is good interface design...
@@ -175,7 +173,7 @@ b) Meet with computer designers to determine whether this was an unintentional b
 c) Fire the computer design team and start over. [[Boston - 3.2.3 - Fire Them All]]
 
 [[Boston Logan]] 
-</tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="932,389" size="100,100">(set: $bostonClue3 to 0)
+</tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="950.3333333333334,370.6666666666667" size="100,100">(set: $bostonClue3 to 0)
 System verification involves evaluating a system&#39;s compliance to a design specification. For example, you might assess whether a manufactured 30mm bolt measures to 30mm within some stated manufacturing tolerance.
 
 A verified system usually meets its design requirements, but may not always meet the intended user requirements. System //validation// tests whether a system achieves its stated user requirements.
@@ -184,13 +182,13 @@ The MRE distribution machinery has many design specifications. The machine manuf
 
 We still don&#39;t know why the inventory control computer is unable to communicate with the machinery.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="16" name="Boston - 3.2.1 - Redesign Interface" tags="" position="627,694" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="16" name="Boston - 3.2.1 - Redesign Interface" tags="" position="662,560.6666666666666" size="100,100">(set: $bostonClue3 to 0)
 Bad choice.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="17" name="Boston - 3.2.2 - Computer Designers" tags="" position="749,694" size="100,100">(set: $bostonClue3 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="17" name="Boston - 3.2.2 - Computer Designers" tags="" position="792.3333333333334,550.6666666666666" size="100,100">(set: $bostonClue3 to 1)
 Good choice. You should bring this up with the developers.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2.3 - Fire Them All" tags="" position="891,700" size="100,100">(set: $bostonClue3 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="18" name="Boston - 3.2.3 - Fire Them All" tags="" position="912.6666666666667,578.3333333333333" size="100,100">(set: $bostonClue3 to 0)
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m done in Boston" tags="" position="1161,368" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
@@ -259,26 +257,7 @@ Okay, you are done in Atlanta. Your clue is:
 
 [[London - 3.1]]
 [[London - 3.2]]
-[[London - 3.3]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1" tags="" position="2153,841" size="100,100">Story goes here
-
-
-
-[[Atlanta - 1.1]]
-[[Atlanta - 1.2]]
-[[Atlanta - 1.3]]</tw-passagedata><tw-passagedata pid="26" name="Atlanta  Task 2" tags="" position="2460,1080" size="100,100">Story goes here
-
-
-
-[[Atlanta - 2.1]]
-[[Atlanta - 2.2]]
-[[Atlanta - 2.3]]</tw-passagedata><tw-passagedata pid="27" name="Atlanta  Task 3" tags="" position="2772,744" size="100,100">Story goes here
-
-
-
-
-[[Atlanta - 3.1]]
-[[Atlanta - 3.2]]
-[[Atlanta - 3.3]]</tw-passagedata><tw-passagedata pid="28" name="I&#39;m done in Orlando" tags="" position="1739,454" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
+[[London - 3.3]]</tw-passagedata><tw-passagedata pid="25" name="I&#39;m done in Orlando" tags="" position="1739,454" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
 (set: _orlandoClue to &quot;&quot;)
 (if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _orlandoClue to &quot;This is something correct.&quot;)
 ]
@@ -293,7 +272,7 @@ Okay, you are done in Orlando. Your clue is:
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="29" name="London  Task 1" tags="" position="1234,1117" size="100,100">Story goes here
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="26" name="London  Task 1" tags="" position="1234,1117" size="100,100">Story goes here
 
 
 
@@ -302,7 +281,7 @@ Okay, you are done in Orlando. Your clue is:
 
 [[London - 1.1]]
 [[London - 1.2]]
-[[London - 1.3]]</tw-passagedata><tw-passagedata pid="30" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
+[[London - 1.3]]</tw-passagedata><tw-passagedata pid="27" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
 
 You know, we should have the technician try her magic. This machinery was designed to precision, so it&#39;s gotta be some simple hardware problem. Could be some wire connected to the wrong place, or a bad capacitor.
 
@@ -313,12 +292,12 @@ You: &quot;Hmm. That wasn&#39;t the answer I was hoping for. I should rethink th
 
 Let&#39;s reconsider. [[Boston Task 1 Fenway]] 
 
-This problem is too hard. Back to the airport. [[Boston Logan]] </tw-passagedata><tw-passagedata pid="31" name="Boston - 1.2 - Dissolve the Problem" tags="" position="56.666666666666664,509" size="200,100">(set: $bostonClue1 to 0)
+This problem is too hard. Back to the airport. [[Boston Logan]] </tw-passagedata><tw-passagedata pid="28" name="Boston - 1.2 - Dissolve the Problem" tags="" position="56.666666666666664,509" size="200,100">(set: $bostonClue1 to 0)
 Okay, let&#39;s hope this was a fluke. Sometimes things just don&#39;t work right!
 
 Wish we could be sure this wouldn&#39;t happen again. Anyway, back to the airport.
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="32" name="Boston - 1.3 - Model the Problem" tags="" position="205,376.3333333333333" size="200,100">(set: $bostonClue1 to 1)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="29" name="Boston - 1.3 - Model the Problem" tags="" position="205,376.3333333333333" size="200,100">(set: $bostonClue1 to 1)
 Interesting choice. The machine manufacturer has a digital model of the inventory distribution system. Let&#39;s call the chief systems engineer, Mr. Boyardee, at TastyTroopTreats, Inc. to see what he says.
 
 Mr Boyardee: &quot;Cliff Boyardee, TastyTroopTreats.&quot;
@@ -334,7 +313,7 @@ Jane: &quot;Yep. That&#39;s already scheduled for Thursday morning, and we plan 
 
 Awesome job, you have solved the problem!
 
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="33" name="Boston - 2.1 - Build That Cloud Ourselves" tags="" position="44.33333333333333,802.3333333333334" size="200,100">(set: $bostonClue2 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="30" name="Boston - 2.1 - Build That Cloud Ourselves" tags="" position="44.33333333333333,802.3333333333334" size="200,100">(set: $bostonClue2 to 0)
 
 Okay, we can build our own. There are some advantages. The government and TastyTroopTreats can own all of that infrastructure: servers, buildings, software. We&#39;ll make sure all of the data communications is in tip-top shape, government style!
 
@@ -343,7 +322,7 @@ But wait, isn&#39;t commercial industry pretty good at this stuff? It&#39;s not 
 Oh well. We&#39;ll ensure plenty of good jobs building and running our MRE server farms.
 
 I&#39;ve solved the problem! Back to the airport.
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="34" name="Boston - 2.2 - Use Third-Party Cloud Solution" tags="" position="257,799" size="200,100">(set: $bostonClue2 to 1)</tw-passagedata><tw-passagedata pid="35" name="Boston - 2.3 - Cloud is risky. Rethink the solution." tags="" position="477,800" size="200,100">(set: $bostonClue2 to 0)
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="31" name="Boston - 2.2 - Use Third-Party Cloud Solution" tags="" position="257,799" size="200,100">(set: $bostonClue2 to 1)</tw-passagedata><tw-passagedata pid="32" name="Boston - 2.3 - Cloud is risky. Rethink the solution." tags="" position="477,800" size="200,100">(set: $bostonClue2 to 0)
 
 Cloud stuff. Sounds like a security problem waiting to happen. I agree with the old curmudgeon engineer. We need a sound solution that doesn&#39;t require some of these new technologies the Silicon Valley brainiacs are proposing.
 
@@ -352,9 +331,16 @@ How about this? Each military installation can fill out a form, once a month, th
 Yeah, okay. In high demand situations it might get tricky working with all those emails. And every so often the installation POC might be on leave, but they&#39;ll figure out a system.
 
 Problem solved! Back to the airport.
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="36" name="London - 1.1" tags="" position="955,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="London - 1.2" tags="" position="1105,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="London - 1.3" tags="" position="1255,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="London - 2.1" tags="" position="1270,1511" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="London - 2.2" tags="" position="1412,1511" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="London - 2.3" tags="" position="1551,1509" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="42" name="London - 3.1" tags="" position="1575,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="43" name="London - 3.2" tags="" position="1700,1251" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="44" name="London - 3.3" tags="" position="1831,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="45" name="Atlanta - 1.1" tags="" position="1927,988" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Atlanta - 2.1" tags="" position="2310,1230" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Atlanta - 2.2" tags="" position="2460,1230" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="48" name="Atlanta - 2.3" tags="" position="2610,1230" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="Atlanta - 1.2" tags="" position="2078,991" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Atlanta - 3.1" tags="" position="2610,995" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="51" name="Atlanta - 3.2" tags="" position="2760,995" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="52" name="Atlanta - 3.3" tags="" position="2910,995" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="53" name="Nellis AFB" tags="" position="102,1565" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="54" name="Eglin AFB" tags="" position="331,1570" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="55" name="Vandenberg AFB" tags="" position="556,1568" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="56" name="Hall of Fame" tags="" position="3145,673" size="100,100">Isn&#39;t this great, you get to see some of the real greats from college football here.  Go ahead strike the Heisman pose, we&#39;ll take a photo!  Ok now that&#39;s over with, this progrma is being pile driven into the ground and you&#39;re out here striking poses in some cheesy football museum?  Disgraceful, Col Gates isn&#39;t having any more of this, get back to the airport and start completing your tasks!
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="33" name="London - 1.1" tags="" position="955,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="London - 1.2" tags="" position="1105,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="London - 1.3" tags="" position="1255,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="London - 2.1" tags="" position="1270,1511" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="London - 2.2" tags="" position="1412,1511" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="London - 2.3" tags="" position="1551,1509" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="London - 3.1" tags="" position="1575,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="London - 3.2" tags="" position="1700,1251" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="London - 3.3" tags="" position="1831,1247" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="42" name="Atlanta - 3.2" tags="" position="2656.6666666666665,995" size="100,100">(set: $AtlantaClue3 to 1)
 
-[ [[Atlanta Hartsfield-Jackson]] ]</tw-passagedata><tw-passagedata pid="57" name="Atlanta - 1.3" tags="" position="2241,992" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="58" name="DFW International" tags="" position="304,1315" size="200,100">OK, you&#39;ve made it.  use your clues to answer the following:
+CORRECT!  Want a star sticker?
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="43" name="Atlanta - 3.3" tags="" position="2818.3333333333335,993.3333333333334" size="100,100">(set: $AtlantaClue3 to 0)
+Well nice try Sally, but we don&#39;t have that kind of scratch or time.  FAIL
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="44" name="Nellis AFB" tags="" position="102,1565" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="45" name="Eglin AFB" tags="" position="331,1570" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Vandenberg AFB" tags="" position="556,1568" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Hall of Fame" tags="" position="3145,673" size="100,100">
+
+[ [[Atlanta Hartsfield-Jackson]] ]</tw-passagedata><tw-passagedata pid="48" name="DFW International" tags="" position="304,1315" size="200,100">OK, you&#39;ve made it.  use your clues to answer the following:
 
 
 Question(s)...
@@ -365,7 +351,7 @@ Select:
 
 [[Nellis AFB]]
 [[Eglin AFB]]
-[[Vandenberg AFB]]</tw-passagedata><tw-passagedata pid="59" name="Orlando  Task 1 Disney World" tags="" position="2257,274" size="100,100">(set: $orlandoClue1 to 0) (if:visits &gt;= 1)[(set: $orlandoT1cmplt to true)]
+[[Vandenberg AFB]]</tw-passagedata><tw-passagedata pid="49" name="Orlando  Task 1 Disney World" tags="" position="2070.3333333333335,70.66666666666663" size="100,100">(set: $orlandoClue1 to 0) (if:visits &gt;= 1)[(set: $orlandoT1cmplt to true)]
 
 Congrats! You’ve made it to Walt Disney World; the second most magical place on Earth. Oh look, it’s Mickey, I’ll be right back……
 Sorry about that, if I didn’t get a picture with him now, I’d have to wait another 90 minutes before he comes back around. Anywho, let’s get some work done so we can expense this escapade on our travel voucher.
@@ -382,7 +368,7 @@ B.[ V&amp;V by Analysis [[ Orlando 1.2 V&amp;V by Analysis ]]]
 C.[ V&amp;V by Test [[ Orlando 1.3 V&amp;V by Test ]]]
 D.[ V&amp;V by Examination [[ Orlando 1.4 V&amp;V by Examination ]]]
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/disney family sticks.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="60" name="Orlando  Task 2 Gatorland" tags="" position="2571,278" size="100,100">(set: $orlandoClue2 to 0) (if:visits &gt;= 1)[(set: $orlandoT2cmplt to true)]
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/disney family sticks.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="50" name="Orlando  Task 2 Gatorland" tags="" position="2612.6666666666665,368" size="100,100">(set: $orlandoClue2 to 0) (if:visits &gt;= 1)[(set: $orlandoT2cmplt to true)]
 
 Get ready for down-home family fun at “The Alligator Capital of the World” - Gatorland! It’s your one-stop-shop for bad fashion, kooky entertainment, and questionable food choices. Let’s go see if the $30 admissions ticket is all it’s cracked up to be.
 
@@ -396,7 +382,7 @@ B.[ V&amp;V by Analysis [[Orlando 2.2 V&amp;V by Analysis]]
 C.[ V&amp;V by Test [[Orllando 2.3 V&amp;V by Test]]
 D.[ V&amp;V by Examination [[Orlando 2.4 V&amp;V by Examination]]
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/gator.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="61" name="Orlando  Task 3 Kennedy Space Center" tags="" position="2977,218" size="200,100">(set: $orlandoClue3 to 0) (if:visits &gt;= 1)[(set: $orlandoT3cmplt to true)]
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/gator.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="51" name="Orlando  Task 3 Kennedy Space Center" tags="" position="2977,218" size="200,100">(set: $orlandoClue3 to 0) (if:visits &gt;= 1)[(set: $orlandoT3cmplt to true)]
 
 Welcome to the Kennedy Space Center Visitor Complex. Get ready for an out-of-this-world experience. Here you&amp;#39;ll be inspired as you dive into the past, present, and future of space travel. Hurry up before SpaceX makes this place obsolete.
 
@@ -410,55 +396,132 @@ B.[ V&amp;V by Analysis [[Orlando 3.2 V&amp;V by Analysis]]]
 C.[ V&amp;V by Test [[Orlando 3.3 V&amp;V by Test]]]
 D.[ V&amp;V by Examination [[Orlando 3.4 V&amp;V by Examination]]]
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/shuttle.gif&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="62" name=" Orlando 1.1 V&amp;V by Demo " tags="" position="2074,317" size="100,100">This wrong answer is stopping the right one from emerging! Way to go.
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/shuttle.gif&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="52" name=" Orlando 1.1 V&amp;V by Demo " tags="" position="1907.3333333333335,177" size="100,100">This wrong answer is stopping the right one from emerging! Way to go.
 
 (set: $orlandoClue1 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="63" name=" Orlando 1.2 V&amp;V by Analysis " tags="" position="2109,447" size="100,100">This wrong answer is the right answer in search of a different question. Nice.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="53" name=" Orlando 1.2 V&amp;V by Analysis " tags="" position="2030.6666666666665,292" size="100,100">This wrong answer is the right answer in search of a different question. Nice.
 
 (set: $orlandoClue1 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name=" Orlando 1.3 V&amp;V by Test " tags="" position="2184,575" size="100,100">We&#39;re not implicating right or wrong here, but the textbook says otherwise.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="54" name=" Orlando 1.3 V&amp;V by Test " tags="" position="2197.3333333333335,233.33333333333331" size="100,100">We&#39;re not implicating right or wrong here, but the textbook says otherwise.
 
 (set: $orlandoClue1 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="65" name=" Orlando 1.4 V&amp;V by Examination " tags="" position="2254,448" size="200,100">That is correct. V&amp;V by examination verifies that a requirement is met through use of one’s senses (usually visual) and is appropriate for qualitative requirements not suitable or practical for testing.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="55" name=" Orlando 1.4 V&amp;V by Examination " tags="" position="2232.3333333333335,36.3333333333332" size="200,100">That is correct. V&amp;V by examination verifies that a requirement is met through use of one’s senses (usually visual) and is appropriate for qualitative requirements not suitable or practical for testing.
 
 (set: $orlandoClue1 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="66" name="Orlando 2.1 V&amp;V by Demo" tags="" position="2412,334" size="100,100">That is correct. V&amp;V by demonstration verifies that requirements are met through theoperation, adjustment, or reconfiguration of a test article. It relies on observing andrecording functional operations without detailed data gathering or use of specialized test equipment and excludes quantitative evaluation of data.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="56" name="Orlando 2.1 V&amp;V by Demo" tags="" position="2390.3333333333335,339" size="100,100">That is correct. V&amp;V by demonstration verifies that requirements are met through theoperation, adjustment, or reconfiguration of a test article. It relies on observing andrecording functional operations without detailed data gathering or use of specialized test equipment and excludes quantitative evaluation of data.
 
 (set: $orlandoClue2 to 1)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="67" name="Orlando 2.2 V&amp;V by Analysis" tags="" position="2479,448" size="100,100">This wrong answer is stopping the right one from emerging. Classic.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="57" name="Orlando 2.2 V&amp;V by Analysis" tags="" position="2462.3333333333335,513" size="100,100">This wrong answer is stopping the right one from emerging. Classic.
 
 (set: $orlandoClue2 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="68" name="Orllando 2.3 V&amp;V by Test" tags="" position="2541,568" size="100,100">This wrong answer is the right answer in search of a different question.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="58" name="Orllando 2.3 V&amp;V by Test" tags="" position="2604.3333333333335,599.6666666666667" size="100,100">This wrong answer is the right answer in search of a different question.
 
 (set: $orlandoClue2 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="69" name="Orlando 2.4 V&amp;V by Examination" tags="" position="2611,449" size="200,100">We&#39;re not saying you’re wrong, but the textbook says otherwise.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="59" name="Orlando 2.4 V&amp;V by Examination" tags="" position="2770,557.3333333333334" size="200,100">We&#39;re not saying you’re wrong, but the textbook says otherwise.
 
 (set: $orlandoClue2 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="70" name="Orlando 3.1 V&amp;V by Demo" tags="" position="2794,253" size="100,100">This wrong answer is stopping the right one from emerging.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="60" name="Orlando 3.1 V&amp;V by Demo" tags="" position="2814,303" size="100,100">This wrong answer is stopping the right one from emerging.
 
 (set: $orlandoClue3 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="71" name="Orlando 3.2 V&amp;V by Analysis" tags="" position="2862,374" size="100,100">That is correct. V&amp;V by Analysis verifies that the requirement is met through the analysis of relevant data and uses predictive, quantitative methods (e.g., modeling/sim, statistics). It is used in lieu of formal testing because it is more feasible due to inability to reasonably execute full test, cost/time constraints, and inability to be performed in a non- destructive manner.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="61" name="Orlando 3.2 V&amp;V by Analysis" tags="" position="3015.3333333333335,375.6666666666667" size="100,100">That is correct. V&amp;V by Analysis verifies that the requirement is met through the analysis of relevant data and uses predictive, quantitative methods (e.g., modeling/sim, statistics). It is used in lieu of formal testing because it is more feasible due to inability to reasonably execute full test, cost/time constraints, and inability to be performed in a non- destructive manner.
 
 (set: $orlandoClue3 to 1)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="72" name="Orlando 3.3 V&amp;V by Test" tags="" position="2945,496" size="100,100">This wrong answer is the right answer in search of a different question.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="62" name="Orlando 3.3 V&amp;V by Test" tags="" position="3180,349.3333333333333" size="100,100">This wrong answer is the right answer in search of a different question.
 
 (set: $orlandoClue3 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="73" name="Orlando 3.4 V&amp;V by Examination" tags="" position="3075,394" size="200,100">We&#39;re not saying you’re wrong, but the textbook says otherwise.
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="63" name="Orlando 3.4 V&amp;V by Examination" tags="" position="3318.3333333333335,199" size="200,100">We&#39;re not saying you’re wrong, but the textbook says otherwise.
 
 (set: $orlandoClue3 to 0)
 
-[[Orlando International]] </tw-passagedata></tw-storydata>
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name="Atlanta  Task 1 CFB Hall of Fame" tags="" position="2080,785.3333333333333" size="100,100">(set: $atlantaClue1 to 0) (if:visits &gt;= 1)[(set: $atlantaT1cmplt to true)]
+Isn&#39;t this great, you get to see some of the real greats from college football here.  Go ahead strike the Heisman pose, we&#39;ll take a photo!  Ok now that&#39;s over with, this program is being pile driven into the ground and you&#39;re out here striking poses in some cheesy football museum?
+
+Disgraceful, Col Gates isn&#39;t having any more of this, get going on these tasks!
+
+When TastyTroopTreats, Inc. developed a third party cloud solution for the MRE inventory management and order system they developed the system to support only so many users.  The system has been functional for some time with no major problems.  Recently USAF conducted it&#39;s largest exercise to date with 2 MAJCOM&#39;s participating in the biggest MRE ordering event in history!  TastyTroopTreats, Inc. was overwhelmed and the cloud system crashed.  Col Gates was not happy and wants solutions pronto.  
+
+What&#39;s the best answer to accommodate this sudden spike in users?
+
+[A. Add servers to the cloud to provided needed VPC&#39;s [[ Atlanta - 1.1 ]]]
+[B. Utilize AWS EC2 service to provide elastic expansion[[ Atlanta - 1.2 ]]]
+[C. Get Bill Gates on the horn and ask him[[ Atlanta - 1.3 ]]]
+[D. Add a program increment to your release schedule to develop a home grown server farm and bypass this expensive cloud stuff[[ Atlanta - 1.4]]]
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="65" name="Atlanta  Task 2 Truist Park" tags="" position="2393.333333333333,1074.6666666666665" size="100,100">(set: $atlantaClue2 to 0) (if:visits &gt;= 1)[(set: $atlantaT2cmplt to true)]
+Welcome to Truist Park, home of The Braves, the Buffalo Bills of baseball, how many times can you lose in the World Series?  In a row even!  This new ballpark is sure seweet, so glad the taxpayers of Atlanta got to foot the bill so the Billionare owners can have the Millionare players play a game in front of all 1300 fans that can afford to go.  All paid for by the working class who have to watch on TV...God Bless America, PLAY BALL!
+
+TastyTroopTreats, Inc. developed their cloud solution in record time.  From start to finish they delivered a functional product in 4 months, a single program increment!  Since release they&#39;ve taken the Mircosoft approach and have been patching the bugs discovered by field users&#39; deficiency reports. Col Gates expected this and it was a small price to pay for having a functional product so fast.  The software patching has revealed the accrual of significant technical debt.  This technical debt can directly be attributed to the shortcuts taken by the software teams to achieve such fast delivery.  Currently the patches are released every 6 weeks, to accommodate implementation, testing, validation and verification.
+
+What&#39;s the best solution to providing a solution to this technical debt, that we know will require many iterative releases.
+
+
+
+[A. Establish a DevSecOps pipeline with continuous authority to operate and increase release frequency[[ Atlanta - 2.1 ]]]
+[B. Add developers to the team to strictly focus on technical debt[[ Atlanta - 2.2 ]]]
+[C. Add an agile team to evaluate technical debt and build a solution[[ Atlanta - 2.3 ]]]
+[D. Split the agile teams, one half to maintain what we have, the other half will re-design the software package bottom up and do it correctly this time[[ Atlanta - 2.4]]]
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/baseball2.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="66" name="Atlanta  Task 3 Falcons" tags="" position="2765,783.3333333333334" size="100,100">(set: $atlantaClue3 to 0) (if:visits &gt;= 1)[(set: $atlantaT3cmplt to true)]
+This is a cool stadium, whoever designed that roof structure was really onto something!  Lets take a very simple structure, and really complicate the building process so we can make more money, brilliant!  Glad we have the taxpayers footing that bill.  The Falcon&#39;s, always good enough to keep fans, but never good enough to win a playoff game, a perfect balance for profitability.  
+
+Col Gates is tired of how much time we spend looking at sports related items, next time we&#39;re going to the museum of natural history!
+
+TastyTroopTreats, Inc. has many agile teams workingon their software solution for the MRE factory.  12 teams are currently assigned to be working on different parts of the software and hardware systems integration teams. A major problem these teams are having is resolving dependencies on that one team may have on another.
+
+How can this be quickly addressed and resolved?
+
+[Assign a member from each team to meet together daily[[ Atlanta - 3.1 ]]]
+[During Program Increment planning reserve time for teams to meet and discuss dependencies[[Atlanta - 3.2]]]
+[Hire a contractor to come in and plan out their dependencies[[Atlanta - 3.3]]]
+[Go back to waterfall delivery, properly plan, test, validate, and verify the product before delivery[[ Atlanta - 3.4]]]
+
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="67" name=" Atlanta - 1.1 " tags="" position="1861.6666666666665,856.3333333333334" size="100,100">(set: $AtlantaClue1 to 0)
+Expensive, what if you&#39;re noy always using all those servers?
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="68" name=" Atlanta - 1.2 " tags="" position="2000,977.6666666666667" size="100,100">(set: $AtlantaClue1 to 1)
+NICE choice, this provides the elasticity we need to accommodate high demand spikes.
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="69" name=" Atlanta - 1.3 " tags="" position="2161,976.9999999999999" size="100,100">(set: $AtlantaClue1 to 0)
+He&#39;s too busy making vaccines for maleria and other lab developed viruses that plague the planet... not gonna happen.
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="70" name=" Atlanta - 1.4" tags="" position="2313.3333333333335,865.3333333333333" size="100,100">(set: $AtlantaClue1 to 0)
+Not what we were looking for.
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="71" name=" Atlanta - 2.1 " tags="" position="2190,1128" size="100,100">(set: $AtlantaClue2 to 1)
+
+CORRECT!  DSOP allow for continuous itegration and continuous delivery!
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="72" name=" Atlanta - 2.2 " tags="" position="2305,1236.3333333333333" size="100,100">(set: $AtlantaClue2 to 0)
+
+Maybe if money was no object...but no!
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="73" name=" Atlanta - 2.3 " tags="" position="2446.6666666666665,1234.6666666666665" size="100,100">(set: $AtlantaClue2 to 0)
+
+Anything with the word Agile in it has to be right?  This isn&#39;t a good idea.
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="74" name=" Atlanta - 2.4" tags="" position="2580,1136.3333333333333" size="100,100">(set: $AtlantaClue2 to 0)
+
+Ambitious...but WRONG!
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="75" name=" Atlanta - 3.1 " tags="" position="2551.6666666666665,873.3333333333334" size="100,100">(set: $AtlantaClue3 to 1)
+
+Maybe we can have a meeting to plan this meeting?  This sounds ok, but c&#39;mon we&#39;re pressed for time here.  
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="76" name=" Atlanta - 3.4" tags="" position="2975,870" size="100,100">(set: $AtlantaClue3 to 0)
+Wow, this was really meant to be a joke and you picked it!  FAIL
+
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
