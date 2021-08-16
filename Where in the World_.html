@@ -24,16 +24,13 @@ Col Della Gates, our (print: $programName) Program Manager, needs your help! She
 &#39;&#39;Quit getting distracted&#39;&#39;! Your program will be cancelled if you can&#39;t find the NST crooks!
 You need to travel to all of these cities to solve critical Systems Engineering problems for the (print: $programName) program.
 
-
-
-(if: $CitiesVisited&#39;s Boston is $visitedNo)[ [[Boston Logan]] ]
-(if: $CitiesVisited&#39;s London is $visitedNo)[ [[London Heathrow]] ]
-(if: $CitiesVisited&#39;s Atlanta is $visitedNo)[ [[Atlanta Hartsfield-Jackson]] ]
-(if: $CitiesVisited&#39;s Orlando is $visitedNo)[ [[Orlando International]] ]
-(if: $CitiesVisited&#39;s Boston is not $visitedNo and $CitiesVisited&#39;s London is not $visitedNo and $CitiesVisited&#39;s Atlanta is not $visitedNo and $CitiesVisited&#39;s Orlando is not $visitedNo)[You&#39;ve completed all of the tasks in each city, now travel to  [[DFW International]] ]
-
-
-
+(if: &quot;Boston&quot; is in $ourCities)[ [[Boston Logan]]  ]
+(if: &quot;London&quot; is in $ourCities)[ [[London Heathrow]] ] 
+(if: &quot;Atlanta&quot; is in $ourCities)[ [[Atlanta Hartsfield-Jackson]] ]
+(if: &quot;Orlando&quot; is in $ourCities)[ [[Orlando International]] ]
+(if: &quot;Budapest&quot; is in $ourCities)[ [[Budapest - Ferenc Liszt International]] ]
+(if: &quot;Paris&quot; is in $ourCities)[ [[Paris - Charles De Gaulle ]] ] 
+(if: $ourCities&#39;s length is 0)[You&#39;ve completed all of the tasks in each city, now travel to  [[DFW International]] ]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="3" name="Visit USAJobs.com for an alternative career in the Forestry Service" tags="" position="1669,111" size="200,100">Oh. Well this awkard...
 Those cush jobs with the US Forestry Service in Montana were all taken. Turns out, you needed a degree in Biology or Forestry anyway. Your Systems Engineering education would have been of little use.
@@ -92,11 +89,17 @@ Go to your task list:
 
 [[I&#39;m done in Orlando]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1415,103" size="100,100">Where in the SPO is Systems Engineering?
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1416.6666666666667,103" size="100,100">Where in the SPO is Systems Engineering?
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
-(set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
-&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedNo,&quot;Orlando&quot;,$visitedNo))
+
+&lt;!-- Master list of cities --&gt;
+(set: _availableCities to (shuffled: &quot;Boston&quot;,&quot;London&quot;,&quot;Atlanta&quot;,&quot;Orlando&quot;,&quot;Budapest&quot;,&quot;Paris&quot;))
+
+&lt;!-- Subset of cities to be used --&gt;
+(set: $ourCities to _availableCities&#39;s (a:1,2,3)) 
+
+(set: $ClueArray to (a:))
 
 Begin your quest!
 [[Calling all Systems Engineers]] </tw-passagedata><tw-passagedata pid="9" name="Boston Task 1 Fenway" tags="" position="156,243" size="100,100">(set: $bostonClue1 to 0) (if:visits &gt;= 1)[(set: $bostonT1cmplt to true)]
@@ -150,6 +153,8 @@ Go back to the airport:
 ---
 Cities Visited:
 (print: $CitiesVisited)
+Cities remaining: (print: $ourCities)
+
 Your clues:
 (print: $ClueArray)
 </tw-passagedata><tw-passagedata pid="13" name="Boston - 3.1 - Computer Validation" tags="" position="919,545" size="100,100">(set: $bostonClue3 to 0)
@@ -202,7 +207,7 @@ Okay, you are done in Boston. Your clue is:
 (print: _bostonClue)
 
 (set: $ClueArray to $ClueArray + (a: _bostonClue))
-(set: $CitiesVisited&#39;s Boston to $visitedYes)
+(set: $ourCities to $ourCities - (a:&quot;Boston&quot;))
 
 [[Travel to Dulles]] 
 
@@ -224,7 +229,7 @@ Okay, you are done in Boston. Your clue is:
 (print: _londonClue)
 
 (set: $ClueArray to $ClueArray + (a: _londonClue))
-(set: $CitiesVisited&#39;s London to $visitedYes)
+(set: $ourCities to $ourCities - (a:&quot;London&quot;))
 
 [[Travel to Dulles]] 
 
@@ -239,7 +244,7 @@ Okay, you are done in Atlanta. Your clue is:
 (print: _atlantaClue)
 
 (set: $ClueArray to $ClueArray + (a: _atlantaClue))
-(set: $CitiesVisited&#39;s Atlanta to $visitedYes)
+(set: $ourCities to $ourCities - (a:&quot;Atlanta&quot;))
 
 [[Travel to Dulles]] 
 
@@ -312,7 +317,7 @@ Okay, you are done in Orlando. Your clue is:
 (print: _orlandoClue)
 
 (set: $ClueArray to $ClueArray + (a: _orlandoClue))
-(set: $CitiesVisited&#39;s Orlando to $visitedYes)
+(set: $ourCities to $ourCities - (a:&quot;Orlando&quot;))
 
 [[Travel to Dulles]] 
 
@@ -605,7 +610,22 @@ What should we do?
 [[Budapest - 3.3 - TastyTroopTreats Forever]]
 
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1611,1729" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="69" name="Budapest - 1.1 - Not our problem" tags="" position="865,2183" size="100,100">You recommended to Col Gates that we tell the Hungarians that nothing can be done. Our program is too far along to add new users and their requirements.
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084.3333333333333,870.6666666666666" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
+(set: _bpestClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _bpestClue to &quot;This is something correct.&quot;)
+]
+(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
+(set: _bpestClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
+Okay, you are done in Boston. Your clue is:
+(print: _bpestClue)
+
+(set: $ClueArray to $ClueArray + (a: _bpestClue))
+(set: $ourCities to $ourCities - (a:&quot;Budapest&quot;))
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="69" name="Budapest - 1.1 - Not our problem" tags="" position="865,2183" size="100,100">You recommended to Col Gates that we tell the Hungarians that nothing can be done. Our program is too far along to add new users and their requirements.
 
 While technically a sound decision, you are a systems engineer. You should know that systems development is more than just an exercise in technology integration. There are //upstream// and //downstream// influences on your architecture. Upstream influences come from high up: budgets, politics, bureaucracy, user requirements. Downstream influences affect people and organizations below you: suppliers, technology choices, system users.
 
@@ -742,7 +762,14 @@ CORRECT!  Want a star sticker?
 [[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="90" name=" Atlanta - 3.3 " tags="" position="2935,937" size="100,100">(set: $AtlantaClue3 to 0)
 Well nice try Sally, but we don&#39;t have that kind of scratch or time.  FAIL
 
-[[Atlanta Hartsfield-Jackson]] </tw-passagedata></tw-storydata>
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="91" name="Paris - Charles De Gaulle " tags="" position="2243,1487.3333333333333" size="100,100">Nothing to see here!
+
+[[I&#39;m done in Paris]]
+</tw-passagedata><tw-passagedata pid="92" name="I&#39;m done in Paris" tags="" position="1636.3333333333335,950.6666666666666" size="100,100">Double-click this passage to edit it.
+
+
+(set: $ourCities to $ourCities - (a:&quot;Paris&quot;))
+[[Travel to Dulles]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
