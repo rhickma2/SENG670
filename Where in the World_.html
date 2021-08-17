@@ -29,7 +29,7 @@ You need to travel to all of these cities to solve critical Systems Engineering 
 (if: &quot;Atlanta&quot; is in $ourCities)[ [[Atlanta Hartsfield-Jackson]] ]
 (if: &quot;Orlando&quot; is in $ourCities)[ [[Orlando International]] ]
 (if: &quot;Budapest&quot; is in $ourCities)[ [[Budapest - Ferenc Liszt International]] ]
-(if: &quot;Paris&quot; is in $ourCities)[ [[Paris - Charles De Gaulle ]] ] 
+(if: &quot;Denver&quot; is in $ourCities)[ [[Denver]] ] 
 (if: $ourCities&#39;s length is 0)[You&#39;ve completed all of the tasks in each city, now travel to  [[DFW International]] ]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="3" name="Visit USAJobs.com for an alternative career in the Forestry Service" tags="" position="1669,111" size="200,100">Oh. Well this awkard...
@@ -89,12 +89,12 @@ Go to your task list:
 
 [[I&#39;m done in Orlando]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1416.6666666666667,103" size="100,100">Where in the SPO is Systems Engineering?
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1416,103" size="100,100">Where in the SPO is Systems Engineering?
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
 
 &lt;!-- Master list of cities --&gt;
-(set: _availableCities to (shuffled: &quot;Boston&quot;,&quot;London&quot;,&quot;Atlanta&quot;,&quot;Orlando&quot;,&quot;Budapest&quot;,&quot;Paris&quot;))
+(set: _availableCities to (shuffled: &quot;Boston&quot;,&quot;London&quot;,&quot;Atlanta&quot;,&quot;Orlando&quot;,&quot;Budapest&quot;,&quot;Denver&quot;))
 
 &lt;!-- Subset of cities to be used --&gt;
 (set: $ourCities to _availableCities&#39;s (a:1,2,3)) 
@@ -255,16 +255,21 @@ You are reviewing the art and carriages and wondering when you will get your pin
 What should you recommend to your supervisor?
 
 (if:visits &gt;= 1)[(set: $londonT2cmplt to true)]
-[[London - 2.1 - Proceed with the CDR]]
-[[London - 2.2 - Skip the CDR]]
-[[London - 2.3 - Delay the CDR]]</tw-passagedata><tw-passagedata pid="24" name="London  Task 3 - Tower of London" tags="" position="1712,1105" size="100,100">Story goes here
+* Good idea, this way the prime can get more resources and attention from their leadership to help close the multitude of liens that are expected [[London - 2.2 - Proceed with the CDR]]
+* Who cares? CDR is not a System Engineering Technical Review anyway![[London - 2.1 - Skip the CDR]]
+* Terrible idea, it is better to delay and pass the review than to stick to schedule and waste resources tracking and closing liens. [[London - 2.3 - Delay the CDR]]</tw-passagedata><tw-passagedata pid="24" name="London  Task 3 - Tower of London" tags="" position="1712,1105" size="100,100">(if:visits &gt;= 1)[(set: $londonT3cmplt to true)]
+
+Now you are visiting the Tower of London, the home of the Crown Jewels. It’s a notorious prison, home to executions and torture. And I’m pretty sure it is where the killed Mel Gibson and put his head on a pike. Oh wait, Wikipedia says almost nobody was executed there and Braveheart was executed at the Elms in Smithfield (but he did spend a few nights at the Tower of London). So it is a regular old fortress, that sometimes had prisoners and was even a zoo for a little while. Not so exciting.
+
+Just as you are starting to think you’ll have time for fish and chips washed down by a tasty pint of local ale you get another call from your boss. These NST operatives don’t give up! They have convinced your program manager that since the program has successfully executed CDR (with all liens closed) and all requirements have been verified in a System Verification Review that the program should plan and schedule the Production Readiness Review for the end of Engineering and Manufacturing Development.
+
+How do you respond to this latest development?
 
 
-
-(if:visits &gt;= 1)[(set: $londonT3cmplt to true)]
-[[London - 3.1 - Proceed with the PRR]]
-[[London - 3.2 - Wait until LRIP]]
-[[London - 3.3 - Wait until FRP]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1 CFB Hall of Fame" tags="" position="2153,841" size="100,100">(set: $atlantaClue1 to 0) (if:visits &gt;= 1)[(set: $atlantaT1cmplt to true)]
+* Insanity! The PRR should not happen until after Low Rate Initial Production [[London - 3.1 - Wait until LRIP]]
+* That PM should stick to program management, the PRR was already executed after PDR and before CDR. [[London - 3.2 - PRR is done already]]
+* We are getting way ahead of ourselves, the PRR happens after the system reaches Full Operational Capability. [[London - 3.3 - Wait until FRP]]
+* This is the correct time for a PRR [[London - 3.4 - Proceed with the PRR]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1 CFB Hall of Fame" tags="" position="2153,841" size="100,100">(set: $atlantaClue1 to 0) (if:visits &gt;= 1)[(set: $atlantaT1cmplt to true)]
 Isn&#39;t this great, you get to see some of the real greats from college football here.  Go ahead strike the Heisman pose, we&#39;ll take a photo!  Ok now that&#39;s over with, this program is being pile driven into the ground and you&#39;re out here striking poses in some cheesy football museum?
 
 Disgraceful, Col Gates isn&#39;t having any more of this, get going on these tasks!
@@ -328,9 +333,9 @@ You are admiring the really big clock when you get an urgent phone call from you
 Upon hearing your supervisor’s concern you respond.
 
 (if:visits &gt;= 1)[(set: $londonT1cmplt to true)]
-[[London - 1.1 - Delay the PDR]]
-[[London - 1.2 - PDRs are made for this]]
-[[London - 1.3 - Have the PDR but stop there]]</tw-passagedata><tw-passagedata pid="30" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
+* Delay the PDR, we must wait until the design satisfies the CDD [[London - 1.1 - Delay the PDR]]
+* Continue as planned, the PDR is conducted to ensure new technologies are mature enough to be integrated into a product subsystem to form its allocated baseline [[London - 1.2 - PDRs are made for this]]
+* Continue as planned, we can’t afford the optics that we are slowing down. We can just hold a lien on PDR until the prime demonstrates the design satisfies the CDD. [[London - 1.3 - Have the PDR but stop there]]</tw-passagedata><tw-passagedata pid="30" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
 
 You know, we should have the technician try her magic. This machinery was designed to precision, so it&#39;s gotta be some simple hardware problem. Could be some wire connected to the wrong place, or a bad capacitor.
 
@@ -380,7 +385,7 @@ How about this? Each military installation can fill out a form, once a month, th
 Yeah, okay. In high demand situations it might get tricky working with all those emails. And every so often the installation POC might be on leave, but they&#39;ll figure out a system.
 
 Problem solved! Back to the airport.
-[[Boston Logan]] </tw-passagedata><tw-passagedata pid="36" name="London - 1.1 - Delay the PDR" tags="" position="955,1247" size="100,100">You want to delay the PDR! But our hosts have already set out the tea and crumpets!
+[[Boston Logan]] </tw-passagedata><tw-passagedata pid="36" name="London - 1.1 - Delay the PDR" tags="" position="905,1213.6666666666667" size="100,100">Wrong, better take another look at the definitions of a CDR and PDR!
 
 The Defense Acquisition Guidebook states:
 //The Preliminary Design Review (PDR) should provide sufficient confidence to proceed with detailed design. The PDR ensures the preliminary design and basic system architecture are complete, that there is technical confidence the capability need can be satisfied within cost and schedule goals and that risks have been identified and mitigation plans established. It also provides the acquisition community, end user and other stakeholders with an opportunity to understand the trade studies conducted during the preliminary design, and thus confirm that design decisions are consistent with the user’s performance and schedule needs and the validated Capability Development Document (CDD). The PDR also establishes the allocated baseline.//
@@ -392,14 +397,16 @@ Remember, at PDR, some technologies may still be immature, especially with regar
 The CDR provides the acquisition community with evidence that the system, down to the lowest system element level, has a reasonable expectation of satisfying the requirements of the system performance specification as derived from the Capability Development Document (CDD) within current cost and schedule constraints. At this point in the program, system performance expectations are based on analysis and any prototype testing/demonstration efforts conducted at the system element and/or system level. Demonstration of a complete system is not expected to be accomplished by this point.//
 
 (set: $londonClue1 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="1105,1247" size="100,100">Good choice. Our program is expected to be somewhat immature at this point. Recall from the DAG that PDRs are intended to show a path towards complete system design maturity.
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="1028.3333333333333,1290.3333333333333" size="100,100">Correct, can’t believe your boss didn’t know that. You should have his job.
+
+Our program is expected to be somewhat immature at this point. Recall from the DAG that PDRs are intended to show a path towards complete system design maturity.
 
 From the DAG:
 //The Preliminary Design Review (PDR) should provide sufficient confidence to proceed with detailed design. The PDR ensures the preliminary design and basic system architecture are complete, that there is technical confidence the capability need can be satisfied within cost and schedule goals and that risks have been identified and mitigation plans established. It also provides the acquisition community, end user and other stakeholders with an opportunity to understand the trade studies conducted during the preliminary design, and thus confirm that design decisions are consistent with the user’s performance and schedule needs and the validated Capability Development Document (CDD). The PDR also establishes the allocated baseline.//
 
 
 (set: $londonClue1 to 1)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="38" name="London - 1.3 - Have the PDR but stop there" tags="" position="1255,1247" size="100,100">Well, that PDR was fun. Good food, good friends. But you thought our program should not proceed any further? You might want to reaquaint yourself with the goal of a PDR.
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="38" name="London - 1.3 - Have the PDR but stop there" tags="" position="1108.3333333333333,1455.3333333333333" size="100,100">Well, that PDR was fun. Good food, good friends. But you thought our program should not proceed any further? You might want to reaquaint yourself with the goal of a PDR.
 
 From the DAG, a successful PDR demonstrates the preliminary design:
 
@@ -411,32 +418,30 @@ From the DAG, a successful PDR demonstrates the preliminary design:
 * Is fully captured and properly allocated in the specifications for each system element and all interface documentation (including system of systems (SoS) interdependencies).
 
 (set: $londonClue1 to 0)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="39" name="London - 2.1 - Proceed with the CDR" tags="" position="1270,1511" size="100,100">Not a very good answer.
-
-When has more attention from leadership due to poor performance ever helped?
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="39" name="London - 2.2 - Proceed with the CDR" tags="" position="1525,1637.6666666666667" size="100,100">Not a very good answer. When has more attention from leadership due to poor performance ever helped?
 
 (set: $londonClue2 to 0)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="40" name="London - 2.2 - Skip the CDR" tags="" position="1412,1511" size="100,100">But wait, a CDR is not an optional thing. We can&#39;t just skip it. Our Milestone Decision Authority (MDA) will probably not like your answer.
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="40" name="London - 2.1 - Skip the CDR" tags="" position="1418.6666666666665,1627.6666666666665" size="100,100">But wait, a CDR is not an optional thing. We can&#39;t just skip it. Our Milestone Decision Authority (MDA) will probably not like your answer.
 
-(set: $londonClue1 to 0)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="41" name="London - 2.3 - Delay the CDR" tags="" position="1551,1509" size="100,100">This makes sense. A disciplined systems engineering approach will reduce the likelihood of cost, schedule, and performance delays. Delaying the CDR until entrance criteria are met may pay off in the long run. Otherwise, you will be forced to track all the unmet criteria later.
+(set: $londonClue2 to 0)
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="41" name="London - 2.3 - Delay the CDR" tags="" position="1634.3333333333333,1542.3333333333333" size="100,100">This makes sense. A disciplined systems engineering approach will reduce the likelihood of cost, schedule, and performance delays. Delaying the CDR until entrance criteria are met may pay off in the long run. Otherwise, you will be forced to track all the unmet criteria later.
 
-(set: $londonClue1 to 1)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="42" name="London - 3.1 - Proceed with the PRR" tags="" position="1575,1247" size="100,100">Good choice. This is why we have a PRR. From the DAG:
+(set: $londonClue2 to 1)
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="42" name="London - 3.4 - Proceed with the PRR" tags="" position="1915,1367" size="100,100">Good choice. This is why we have a PRR. From the DAG:
 //The Production Readiness Review (PRR) for the system determines whether the system design is ready for production, and whether the developer has accomplished adequate production planning for entering Low-Rate Initial Production (LRIP) and Full-Rate Production (FRP). Production readiness increases over time with incremental assessments accomplished at various points in the life cycle of a program.//
 
-(set: $londonClue1 to 1)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="43" name="London - 3.2 - Wait until LRIP" tags="" position="1700,1251" size="100,100">Wrong. One purpose of a PRR is to ensure the adequacy of plans for LRIP. You would not want to have a PRR //after// an LRIP decision was already made.
+(set: $londonClue3 to 1)
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="43" name="London - 3.1 - Wait until LRIP" tags="" position="1665,1269.3333333333333" size="100,100">Wrong. One purpose of a PRR is to ensure the adequacy of plans for LRIP. You would not want to have a PRR //after// an LRIP decision was already made.
 
-(set: $londonClue1 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="44" name="London - 3.3 - Wait until FRP" tags="" position="1831,1247" size="100,100">Incorrect answer. A PRR should happen long before Full-Rate Production and even before Low-Rate Initial Production. Before declarying FRP, we will need to ensure the system meets the CDD requirements. Also, our program will likely have a Physical Configuration Audit (PCA) prior to an FRP decision.
+(set: $londonClue3 to 0)
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="44" name="London - 3.3 - Wait until FRP" tags="" position="1947.6666666666667,1238.6666666666667" size="100,100">Incorrect answer. A PRR should happen long before Full-Rate Production and even before Low-Rate Initial Production. Before declarying FRP, we will need to ensure the system meets the CDD requirements. Also, our program will likely have a Physical Configuration Audit (PCA) prior to an FRP decision.
 
 From the DAG:
 //The Physical Configuration Audit (PCA) is a formal examination of the “as-built” configuration of the system or a configuration item against its technical documentation to establish or verify its product baseline. The objective of the PCA is to resolve any discrepancies between the production-representative item that has successfully passed Operational Test and Evaluation (OT&amp;E) and the associated documentation currently under configuration control. A successful PCA provides the Milestone Decision Authority (MDA) with evidence that the product design is stable, the capability meets end-user needs and production risks are acceptably low. At the conclusion of the PCA, the final product baseline is established and all subsequent changes are processed by formal engineering change action. Further information can be found in MIL-HDBK-61 (Configuration Management Guidance).
 
 The PCA is an event-driven technical assessment that typically occurs during the Production and Deployment (P&amp;D) phase, after successful system validation but prior to the Full-Rate Production Decision Review (FRP DR). A PCA conducted during FRP may miss the opportunity to avoid costly defects built into production. While the system-level PCA typically occurs before the FRP DR, other system element PCAs may be conducted at various points in advance of the system-level PCA.//
 
-(set: $londonClue1 to 0)
+(set: $londonClue3 to 0)
 [[London Heathrow]]</tw-passagedata><tw-passagedata pid="45" name="Nellis AFB" tags="" position="102,1565" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Eglin AFB" tags="" position="331,1570" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Vandenberg AFB" tags="" position="556,1568" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="48" name="DFW International" tags="" position="304,1315" size="200,100">OK, you&#39;ve made it.  use your clues to answer the following:
 
 
@@ -610,7 +615,7 @@ What should we do?
 [[Budapest - 3.3 - TastyTroopTreats Forever]]
 
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084.3333333333333,870.6666666666666" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084,870" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
 (set: _bpestClue to &quot;&quot;)
 (if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _bpestClue to &quot;This is something correct.&quot;)
 ]
@@ -762,14 +767,101 @@ CORRECT!  Want a star sticker?
 [[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="90" name=" Atlanta - 3.3 " tags="" position="2935,937" size="100,100">(set: $AtlantaClue3 to 0)
 Well nice try Sally, but we don&#39;t have that kind of scratch or time.  FAIL
 
-[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="91" name="Paris - Charles De Gaulle " tags="" position="2243,1487.3333333333333" size="100,100">Nothing to see here!
+[[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="91" name="Denver" tags="" position="2219.6666666666665,1412" size="100,100">(if: visits is 1)[(set: $denverT1cmplt to false)(set: $denverT2cmplt to false)(set: $denverT3cmplt to false)]
 
-[[I&#39;m done in Paris]]
-</tw-passagedata><tw-passagedata pid="92" name="I&#39;m done in Paris" tags="" position="1636.3333333333335,950.6666666666666" size="100,100">Double-click this passage to edit it.
+You must complete three tasks while here in Denver. After completing the three tasks, you should travel back to Dulles for another assignment.
+
+Go to your task list:
+(if: $denverT1cmplt is false)[ [[Denver Task 1 - Coors Field]] ]
+(if: $denverT2cmplt is false)[ [[Denver Task 2 - Vail Ski Resort]] ]
+(if: $denverT3cmplt is false)[ [[Denver Task 3 - US Air Force Academy]]]
+
+[[I&#39;m done in Denver]]
+
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="92" name="I&#39;m done in Denver" tags="" position="1636,950" size="100,100">{(set: _allClues to $denverClue1 + $denverClue2 + $denverClue3)
+(set: _denverClue to &quot;&quot;)
+(if: _allClues is 3)[Value 3: //Player got them all right. Give legit clue.//(set: _denverClue to &quot;This is something correct.&quot;)
+]
+(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
+(set: _denverClue to &quot;This is something incorrect, but you don&#39;t know that.&quot;)]
+}
+Okay, you are done in Denver. Your clue is:
+(print: _denverClue)(set: $ClueArray to $ClueArray + (a: _denverClue))(set: $ourCities to $ourCities - (a:&quot;Denver&quot;))
+
+[[Travel to Dulles]] 
+
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="93" name="Denver Task 1 - Coors Field" tags="" position="2068.333333333333,1625.8333333333333" size="100,100">(if:visits &gt;= 1)[(set: $denverT1cmplt to true)]
+Coors Field is the home of the Colorado Rockies Major League Baseball team! Though with 2 playoff appearances in 24 years, one has to wonder how much longer they will be in the league! Probably a lot longer, the Cubs went over 100 years without a World Series title.
+
+This stadium takes the phrase “nosebleeds” seriously as it sits right at 1 mile above sea level. This thin, dry air seems to cause everybody’s nose to bleed at some time or another.
+
+You are enjoying the game, along with a soft pretzel, nachos, a hot dog, peanuts, cotton candy, and a $23 pint of beer when you are contacted by your program office. The Non-System Thinkers (NST) are at it again, this time they are trying to adjust requirements. It turns out the prime is having difficulty meeting a Key Performance Parameter (KPP). The NSTs have advised the project manager to adjust the KPP so that they can meet the requirement.
+
+Upon hearing your supervisor’s story you respond:
+
+* Absolutely not, the KPPs were established by the Air Force customer and approved by the JROC. Any change now would require another round of JROC approval. [[Denver 1.1]]
+* This sounds like a great idea. We could spend a lot of time and money chasing a KPP when it is so much easier to change the KPP to align with our technical limits. [[Denver 1.2]]
+* Change the KPP. These parameters are really more just desirements than actual requirements so anybody can change one. [[Denver 1.3]]
+* Good idea! Your oversight in the Office of the Secretary of Defense encourages requirements to stay fluid throughout a system’s development. [[Denver 1.4]]</tw-passagedata><tw-passagedata pid="94" name="Denver Task 2 - Vail Ski Resort" tags="" position="2503.3333333333335,1575.8333333333335" size="100,100">(if:visits &gt;= 1)[(set: $denverT2cmplt to true)]
+Congratulations, you made it to Vail Ski Resort! Just over there is where you can start panhandling to scrape together enough coin so you can buy a day pass for the ski lifts this weekend. At right around $220, many folks elect to put their children down as collateral (and disguise it as ski school).
+
+You have just begun to test out your ability to do pizza/French-fry when you get a frantic call from your supervisor. The NSTs have once again sewed confusion in the program office. They inserted language into the requirements document that states “the contractor may implement Human-Systems Integration domains”. Your supervisor is demanding that the Prime develop and implement of human systems integration plan.
+
+What should you recommend to your supervisor?
 
 
-(set: $ourCities to $ourCities - (a:&quot;Paris&quot;))
-[[Travel to Dulles]] </tw-passagedata></tw-storydata>
+* The supervisor is right. It is never too late to give the prime additional requirements. [[Denver 2.1]]
+* Stick to your guns. The requirement is as clear as day that the prime may implement HSI. [[Denver 2.2]]
+* It is too late to add requirements without contract officer involvement. The use of “may” instead of “shall” is a dead giveaway that this was not meant to be a requirement. [[Denver 2.3]]
+* Good idea, requirements are really just for consideration, requirements should evolve and change over a system’s life. [[Denver 2.4]]
+</tw-passagedata><tw-passagedata pid="95" name="Denver Task 3 - US Air Force Academy" tags="" position="2881.6666666666665,1340.833333333333" size="100,100">(if:visits &gt;= 1)[(set: $denverT3cmplt to true)]
+Welcome to the Air Force Academy in Colorado Springs, Colorado. The Academy is located at 7,258 feet above sea level, far-far above that of West Point or Annapolis. And you are going to love touring the cadet chapel. IT is truly an amazing structure…what’s that sign say? “Closed for Construction”! Wow, a $250M renovation, that won’t be done for years, darn! 
+
+Well, lots of other great outdoor sights to see at USAFA…quick get inside, it’s another afternoon thunderstorm and lightning is within five nautical miles! Well, at least this gives you a chance to meet up with the members of the Academy’s System Engineering Council. They steer the SE program and keep things up to date as representatives from multiple academic departments.
+
+You are meeting with the SE Council when you get a call from your supervisor. Once again the villainous NSTs have enacted a sinister plot against your program office. They have convinced program managers that the program is in serious trouble because it is failing to meet several threshold KPP values. The PMs are expecting a serious cost and schedule overrun as they struggle to meet performance.
+
+How do you respond to this latest development?
+
+* Nothing to worry about. Threshold KPP values are only a “nice-to-have” level of performance. The system will meet its requirements even if it falls short of the threshold. [[Denver 3.1]]
+* Might be time to start updating your resume. Missing threshold KPP values could kill a program if the cost and schedule overruns are not acceptable to Air Force leadership! [[Denver 3.2]]
+* The PMs have it all wrong because there is not relationship between cost, schedule, and performance. Why would additional engineering required to solve KPP shortfalls drive extra cost and schedule?  [[Denver 3.3]]
+* I don’t see what the big problem is, a Key Performance Parameter is not a very important performance requirement. We could fall short of several KPPs and still pass the Production Readiness Review.  [[Denver 3.4]]
+</tw-passagedata><tw-passagedata pid="96" name="Denver 1.1" tags="" position="1993.3333333333333,1812.5" size="100,100">
+
+(set: $denverClue1 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="97" name="Denver 1.2" tags="" position="2130,1909.1666666666665" size="100,100">
+
+(set: $denverClue1 to 1)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="98" name="Denver 1.3" tags="" position="1839.9999999999998,1760.8333333333333" size="100,100">
+(set: $denverClue1 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="99" name="Denver 1.4" tags="" position="2250,1817.4999999999998" size="100,100">Double-click this passage to edit it.
+
+(set: $denverClue1 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="100" name="Denver 2.1" tags="" position="2383.3333333333335,1760.833333333333" size="100,100">(set: $denverClue2 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="101" name="Denver 2.2" tags="" position="2508.3333333333335,1719.1666666666665" size="100,100">(set: $denverClue2 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="102" name="Denver 2.3" tags="" position="2653.3333333333335,1729.166666666667" size="100,100">(set: $denverClue2 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="103" name="Denver 2.4" tags="" position="2793.3333333333335,1692.5000000000002" size="100,100">(set: $denverClue2 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="104" name="Denver 3.1" tags="" position="2656.6666666666665,1490.833333333333" size="100,100">(set: $denverClue3 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="105" name="Denver 3.2" tags="" position="2806.6666666666665,1490.833333333333" size="100,100">(set: $denverClue3 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="106" name="Denver 3.3" tags="" position="2956.6666666666665,1490.833333333333" size="100,100">(set: $denverClue3 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="107" name="Denver 3.4" tags="" position="3106.6666666666665,1490.833333333333" size="100,100">(set: $denverClue3 to 0)
+Back to the airport!
+[[Denver]] </tw-passagedata><tw-passagedata pid="108" name="London - 3.2 - PRR is done already" tags="" position="1804.3333333333333,1406.6666666666667" size="100,100">Wrong. The Production Readiness Review occurs after Milestone C, marking the end of the EMD phase. The Production Readiness Review will occur after Milestone C, whereas PDR and CDR occur before Milestone C.
+
+(set: $londonClue3 to 0)
+[[London Heathrow]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
