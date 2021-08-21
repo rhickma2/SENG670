@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Where in the World?.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Where in the World?" startnode="8" creator="Twine" creator-version="2.3.14" ifid="8BCFD8DD-97CA-4493-B91C-0A40A6CA42BA" zoom="0.25" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Calling all Systems Engineers" tags="" position="1352,358" size="100,100">&#39;&#39;Welcome to the (print: $programName) Program Management Office!&#39;&#39;
+<tw-storydata name="Where in the World?" startnode="8" creator="Twine" creator-version="2.3.14" ifid="8BCFD8DD-97CA-4493-B91C-0A40A6CA42BA" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Calling all Systems Engineers" tags="" position="1352,358" size="100,100">&#39;&#39;Welcome to the (print: $programName) Program Management Office!&#39;&#39;
 
 Where in the SPO is Systems Engineering?
 //I can&#39;t find it anywhere!//
@@ -19,17 +19,17 @@ The crime syndicate NST (Non-Systems Thinkers) is trying to ensure we have a sub
 Col Della Gates, our (print: $programName) Program Manager, needs your help! She has asked that any available Systems Engineer immediately go to Dulles airport for orders.
 (set: $ExtraWorkload to false)
 [[Travel to Dulles]]
-[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="1368,614" size="100,100">Welcome to Dulles!
+[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="1368,615.6666666666666" size="100,100">Welcome to Dulles!
 //I wonder who engineered those all-terrain trolleys that connect the terminals to the airplanes?//
 &#39;&#39;Quit getting distracted&#39;&#39;! Your program will be cancelled if you can&#39;t find the NST crooks!
 You need to travel to all of these cities to solve critical Systems Engineering problems for the (print: $programName) program.
 
-(if: &quot;Boston&quot; is in $ourCities)[ [[Boston Logan]]  ]
-(if: &quot;London&quot; is in $ourCities)[ [[London Heathrow]] ] 
-(if: &quot;Atlanta&quot; is in $ourCities)[ [[Atlanta Hartsfield-Jackson]] ]
-(if: &quot;Orlando&quot; is in $ourCities)[ [[Orlando International]] ]
-(if: &quot;Budapest&quot; is in $ourCities)[ [[Budapest - Ferenc Liszt International]] ]
-(if: &quot;Denver&quot; is in $ourCities)[ [[Denver]] ] 
+{(if: &quot;Boston&quot; is in $ourCities)[ [[Boston Logan]] ]}
+{(if: &quot;London&quot; is in $ourCities)[ [[London Heathrow]] ]}
+{(if: &quot;Atlanta&quot; is in $ourCities)[ [[Atlanta Hartsfield-Jackson]] ]}
+{(if: &quot;Orlando&quot; is in $ourCities)[ [[Orlando International]] ]}
+{(if: &quot;Budapest&quot; is in $ourCities)[ [[Budapest - Ferenc Liszt International]] ]}
+{(if: &quot;Denver&quot; is in $ourCities)[ [[Denver]] ]}
 (if: $ourCities&#39;s length is 0)[You&#39;ve completed all of the tasks in each city, now travel to  [[DFW International]] ]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="3" name="Visit USAJobs.com for an alternative career in the Forestry Service" tags="" position="1669,111" size="200,100">Oh. Well this awkard...
@@ -89,7 +89,7 @@ Go to your task list:
 
 [[I&#39;m done in Orlando]]
 
-(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1414.3333333333333,103" size="100,100">(display: &quot;Game Setup&quot;)
+(display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1414,103" size="100,100">(display: &quot;Game Setup&quot;)
 Where in the SPO is Systems Engineering?
 
 Begin your quest!
@@ -140,7 +140,7 @@ c) Has the warehouse machinery been verified to produce packaged MREs at the spe
 Go back to the airport:
 [[Boston Logan]] 
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/benfranklin.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="12" name="MyDashboard" tags="" position="347.66666666666663,29.33333333333333" size="200,100">
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/benfranklin.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="12" name="MyDashboard" tags="" position="347,29" size="200,100">
 ---
 Cities Visited:
 (print: $CitiesVisited)
@@ -202,7 +202,7 @@ Okay, you are done in Boston.
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27.666666666666657" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
 (display: &quot;Game Setup&quot;)
 &lt;!-- (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
@@ -839,7 +839,7 @@ Back to the airport!
 Wrong, if you’ve ever dealt with OSD R&amp;E you know it would looks bad to change requirements (especially KPPs)!
 
 Back to the airport!
-[[Denver]] </tw-passagedata><tw-passagedata pid="100" name="Denver 2.1" tags="" position="2381.3333333333335,1760" size="100,100">(set: $denverClue2 to 0)
+[[Denver]] </tw-passagedata><tw-passagedata pid="100" name="Denver 2.1" tags="" position="2381,1760" size="100,100">(set: $denverClue2 to 0)
 Wrong, it can be too late to add requirements, especially if the program wants to stay on schedule and budget!
 
 Back to the airport!
@@ -874,7 +874,7 @@ Back to the airport!
 [[Denver]] </tw-passagedata><tw-passagedata pid="108" name="London - 3.2 - PRR is done already" tags="" position="1804,1406" size="100,100">Wrong. The Production Readiness Review occurs after Milestone C, marking the end of the EMD phase. The Production Readiness Review will occur after Milestone C, whereas PDR and CDR occur before Milestone C.
 
 (set: $londonClue3 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="109" name="Get A Clue" tags="" position="708.3333333333335,27.500000000000057" size="100,100">&lt;!-- MODIFY THIS CAREFULLY!! --&gt;
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="109" name="Get A Clue" tags="" position="708,27" size="100,100">&lt;!-- MODIFY THIS CAREFULLY!! --&gt;
 &lt;!-- First, we determine what to draw. Variable $drawCorrectClue
 must be set by the previous page to an integer.
 Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
@@ -909,14 +909,16 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 
 &lt;!-- Lastly, reset the clue draw to invalid. --&gt;
 (set: $drawCorrectClue to 2)
-</tw-passagedata><tw-passagedata pid="110" name="Game Setup" tags="" position="213.33333333333348,32.50000000000003" size="100,100">{(set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
+</tw-passagedata><tw-passagedata pid="110" name="Game Setup" tags="" position="213,32" size="100,100">{(set: $gameTestMode to true)
+(set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
 (set: $drawCorrectClue to 2) &lt;!-- set value 2 (invalid) on purpose --&gt;
 
 &lt;!-- Master list of cities --&gt;
 (set: _availableCities to (shuffled: &quot;Boston&quot;,&quot;London&quot;,&quot;Atlanta&quot;,&quot;Orlando&quot;,&quot;Budapest&quot;,&quot;Denver&quot;))
 &lt;!-- Subset of cities to be used --&gt;
-(set: $ourCities to _availableCities&#39;s (a:1,2,3)) 
+(if: $gameTestMode is false)[(set: $ourCities to _availableCities&#39;s (a:1,2,3))]
+(else: )[(set: $ourCities to _availableCities&#39;s (a:1,2,3,4,5,6))]
 (set: $CitiesVisited to (a:))
 &lt;!-- List of finale cities --&gt;
 (set: _finaleCities to (shuffled: &quot;Eglin AFB&quot;, &quot;Nellis AFB&quot;, &quot;Vandenberg SFB&quot;))
