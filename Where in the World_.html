@@ -19,7 +19,7 @@ The crime syndicate NST (Non-Systems Thinkers) is trying to ensure we have a sub
 Col Della Gates, our (print: $programName) Program Manager, needs your help! She has asked that any available Systems Engineer immediately go to Dulles airport for orders.
 (set: $ExtraWorkload to false)
 [[Travel to Dulles]]
-[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="1368,615.6666666666666" size="100,100">Welcome to Dulles!
+[[Visit USAJobs.com for an alternative career in the Forestry Service]]</tw-passagedata><tw-passagedata pid="2" name="Travel to Dulles" tags="" position="1368,615" size="100,100">Welcome to Dulles!
 //I wonder who engineered those all-terrain trolleys that connect the terminals to the airplanes?//
 &#39;&#39;Quit getting distracted&#39;&#39;! Your program will be cancelled if you can&#39;t find the NST crooks!
 You need to travel to all of these cities to solve critical Systems Engineering problems for the (print: $programName) program.
@@ -102,9 +102,9 @@ But last week, at the developer&#39;s test facility, it started throwing product
 
 What is going on? How can we get to the bottom of this?
 
-[[Boston - 1.1 - Fly, Fix, Fly]]
-[[Boston - 1.2 - Dissolve the Problem]]
-[[Boston - 1.3 - Model the Problem]]
+A. [[Boston - 1.1 - Fly, Fix, Fly]]
+B. [[Boston - 1.2 - Dissolve the Problem]]
+C. [[Boston - 1.3 - Model the Problem]]
 
 Go back to the airport. You cannot come back to this task!
 [[Boston Logan]]
@@ -116,9 +116,9 @@ One thing you&#39;ve been a little uncertain about is how the (print: $programNa
 Anyway, the software team is about to start work. They&#39;re arguing a bit about the best solution here. One engineer wants to design the whole thing organically, from the ground up. Another engineer thinks that approach is old-school. Better option is to use third-party cloud solutions if they meet our needs. Then, a third engineer, who has been with TastyTroopTreats since the early 1980s (when the company was named Soldier Slop Enterprises), thinks cloud is risky.
 
 What&#39;s the best approach?
-[[Boston - 2.1 - Build That Cloud Ourselves]]
-[[Boston - 2.2 - Use Third-Party Cloud Solution]]
-[[Boston - 2.3 - Cloud is risky. Rethink the solution.]]
+A. [[Boston - 2.1 - Build That Cloud Ourselves]]
+B. [[Boston - 2.2 - Use Third-Party Cloud Solution]]
+C. [[Boston - 2.3 - Cloud is risky. Rethink the solution.]]
 
 ---
 &#96;**&#96;// The supply commanders at military installations want a provision to override those votes. That&#39;ll ensure troops don&#39;t getting everything they want in life.//
@@ -131,9 +131,9 @@ We couldn&#39;t find a Cheers picture, so here&#39;s a terrible Peppa Pig Rendit
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/peppa.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="11" name="Boston Task 3 Freedom Trail" tags="" position="762,164" size="100,100">(set: $bostonClue3 to 0)
 Oh no! The prime contractor is having difficulty getting the inventory control computer to communicate with the warehouse distribution machinery. What should the systems engineering team investigate to solve this problem? 
 
-a) Has inventory control computer been validated against the user requirements? [[Boston - 3.1 - Computer Validation]]
-b) Have the information system interfaces (hardware and software) been defined and documented? [[Boston - 3.2 - Interface Design]]
-c) Has the warehouse machinery been verified to produce packaged MREs at the specified rate? [[Boston - 3.3 - Machinery Verification]] 
+A. Has inventory control computer been validated against the user requirements? [[Boston - 3.1 - Computer Validation]]
+B. Have the information system interfaces (hardware and software) been defined and documented? [[Boston - 3.2 - Interface Design]]
+C. Has the warehouse machinery been verified to produce packaged MREs at the specified rate? [[Boston - 3.3 - Machinery Verification]] 
 
 (if:visits &gt;= 1)[(set: $bostonT3cmplt to true)]
 
@@ -164,9 +164,9 @@ blah, blah, blah what is good interface design...
 
 During your investigation of the computer/machinery interface, you discover the computer team may be misinterpreting the meaning of a data field. What should you do?
 
-a) Redefine the interface to match what was already coded in the computer.  [[Boston - 3.2.1 - Redesign Interface]]
-b) Meet with computer designers to determine whether this was an unintentional bug or a true interface design problem. [[Boston - 3.2.2 - Computer Designers]]
-c) Fire the computer design team and start over. [[Boston - 3.2.3 - Fire Them All]]
+A. Redefine the interface to match what was already coded in the computer.  [[Boston - 3.2.1 - Redesign Interface]]
+B. Meet with computer designers to determine whether this was an unintentional bug or a true interface design problem. [[Boston - 3.2.2 - Computer Designers]]
+C. Fire the computer design team and start over. [[Boston - 3.2.3 - Fire Them All]]
 
 [[Boston Logan]] 
 </tw-passagedata><tw-passagedata pid="15" name="Boston - 3.3 - Machinery Verification" tags="" position="932,389" size="100,100">(set: $bostonClue3 to 0)
@@ -239,16 +239,16 @@ Okay, you are done in Atlanta.
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="23" name="London  Task 2 - Buckingham Palace" tags="" position="1417,1279" size="100,100">How exciting to be at the Queen’s residence! It is a big palace with lots of rooms and expensive art. And they have the guys in the funny hats.
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="23" name="London  Task 2 - Buckingham Palace" tags="" position="1347,1252" size="200,100">How exciting to be at the Queen’s residence! It is a big palace with lots of rooms and expensive art. And they have the guys in the funny hats.
 
 You are reviewing the art and carriages and wondering when you will get your pint and fish and chips when you get another call from your boss with urgent news about the latest NST operation. These pesky NST operatives appear to have infiltrated the prime contractor and advocated to carry on with the Critical Design Review even though several entrance criteria have not been met. Your boss thinks this sounds like a good idea. 
 
 What should you recommend to your supervisor?
 
 (if:visits &gt;= 1)[(set: $londonT2cmplt to true)]
-* Good idea, this way the prime can get more resources and attention from their leadership to help close the multitude of liens that are expected [[London - 2.2 - Proceed with the CDR]]
-* Who cares? CDR is not a System Engineering Technical Review anyway![[London - 2.1 - Skip the CDR]]
-* Terrible idea, it is better to delay and pass the review than to stick to schedule and waste resources tracking and closing liens. [[London - 2.3 - Delay the CDR]]</tw-passagedata><tw-passagedata pid="24" name="London  Task 3 - Tower of London" tags="" position="1712,1105" size="100,100">(if:visits &gt;= 1)[(set: $londonT3cmplt to true)]
+A. Good idea, this way the prime can get more resources and attention from their leadership to help close the multitude of liens that are expected [[London - 2.2 - Proceed with the CDR]]
+B.  Who cares? CDR is not a System Engineering Technical Review anyway![[London - 2.1 - Skip the CDR]]
+C. Terrible idea, it is better to delay and pass the review than to stick to schedule and waste resources tracking and closing liens. [[London - 2.3 - Delay the CDR]]</tw-passagedata><tw-passagedata pid="24" name="London  Task 3 - Tower of London" tags="" position="1712,1105" size="100,100">(if:visits &gt;= 1)[(set: $londonT3cmplt to true)]
 
 Now you are visiting the Tower of London, the home of the Crown Jewels. It’s a notorious prison, home to executions and torture. And I’m pretty sure it is where the killed Mel Gibson and put his head on a pike. Oh wait, Wikipedia says almost nobody was executed there and Braveheart was executed at the Elms in Smithfield (but he did spend a few nights at the Tower of London). So it is a regular old fortress, that sometimes had prisoners and was even a zoo for a little while. Not so exciting.
 
@@ -257,10 +257,10 @@ Just as you are starting to think you’ll have time for fish and chips washed d
 How do you respond to this latest development?
 
 
-* Insanity! The PRR should not happen until after Low Rate Initial Production [[London - 3.1 - Wait until LRIP]]
-* That PM should stick to program management, the PRR was already executed after PDR and before CDR. [[London - 3.2 - PRR is done already]]
-* We are getting way ahead of ourselves, the PRR happens after the system reaches Full Operational Capability. [[London - 3.3 - Wait until FRP]]
-* This is the correct time for a PRR [[London - 3.4 - Proceed with the PRR]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1 CFB Hall of Fame" tags="" position="2153,841" size="100,100">(set: $atlantaClue1 to 0) (if:visits &gt;= 1)[(set: $atlantaT1cmplt to true)]
+A. Insanity! The PRR should not happen until after Low Rate Initial Production [[London - 3.1 - Wait until LRIP]]
+B. That PM should stick to program management, the PRR was already executed after PDR and before CDR. [[London - 3.2 - PRR is done already]]
+C. We are getting way ahead of ourselves, the PRR happens after the system reaches Full Operational Capability. [[London - 3.3 - Wait until FRP]]
+D. This is the correct time for a PRR [[London - 3.4 - Proceed with the PRR]]</tw-passagedata><tw-passagedata pid="25" name="Atlanta  Task 1 CFB Hall of Fame" tags="" position="2153,841" size="100,100">(set: $atlantaClue1 to 0) (if:visits &gt;= 1)[(set: $atlantaT1cmplt to true)]
 Isn&#39;t this great, you get to see some of the real greats from college football here.  Go ahead strike the Heisman pose, we&#39;ll take a photo!  Ok now that&#39;s over with, this program is being pile driven into the ground and you&#39;re out here striking poses in some cheesy football museum?
 
 Disgraceful, Col Gates isn&#39;t having any more of this, get going on these tasks!
@@ -269,10 +269,10 @@ When TastyTroopTreats, Inc. developed a third party cloud solution for the MRE i
 
 What&#39;s the best answer to accommodate this sudden spike in users?
 
-[A. Add servers to the cloud to provided needed VPC&#39;s [[ Atlanta - 1.1 ]]]
-[B. Utilize AWS EC2 service to provide elastic expansion[[ Atlanta - 1.2 ]]]
-[C. Get Bill Gates on the horn and ask him[[ Atlanta - 1.3 ]]]
-[D. Add a program increment to your release schedule to develop a home grown server farm and bypass this expensive cloud stuff[[ Atlanta - 1.4]]]
+A. Add servers to the cloud to provided needed VPC&#39;s [[ Atlanta - 1.1 ]]
+B. Utilize AWS EC2 service to provide elastic expansion[[ Atlanta - 1.2 ]]
+C. Get Bill Gates on the horn and ask him[[ Atlanta - 1.3 ]]
+D. Add a program increment to your release schedule to develop a home grown server farm and bypass this expensive cloud stuff[[ Atlanta - 1.4]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="26" name="Atlanta  Task 2 Truist Park" tags="" position="2460,1080" size="100,100">(set: $atlantaClue2 to 0) (if:visits &gt;= 1)[(set: $atlantaT2cmplt to true)]
 Welcome to Truist Park, home of The Braves, the Buffalo Bills of baseball, how many times can you lose in the World Series?  In a row even!  This new ballpark is sure seweet, so glad the taxpayers of Atlanta got to foot the bill so the Billionare owners can have the Millionare players play a game in front of all 1300 fans that can afford to go.  All paid for by the working class who have to watch on TV...God Bless America, PLAY BALL!
@@ -283,10 +283,10 @@ What&#39;s the best solution to providing a solution to this technical debt, tha
 
 
 
-[A. Establish a DevSecOps pipeline with continuous authority to operate and increase release frequency[[ Atlanta - 2.1 ]]]
-[B. Add developers to the team to strictly focus on technical debt[[ Atlanta - 2.2 ]]]
-[C. Add an agile team to evaluate technical debt and build a solution[[ Atlanta - 2.3 ]]]
-[D. Split the agile teams, one half to maintain what we have, the other half will re-design the software package bottom up and do it correctly this time[[ Atlanta - 2.4]]]
+A. Establish a DevSecOps pipeline with continuous authority to operate and increase release frequency[[ Atlanta - 2.1 ]]
+B. Add developers to the team to strictly focus on technical debt[[ Atlanta - 2.2 ]]
+C. Add an agile team to evaluate technical debt and build a solution[[ Atlanta - 2.3 ]]
+D. Split the agile teams, one half to maintain what we have, the other half will re-design the software package bottom up and do it correctly this time[[ Atlanta - 2.4]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/baseball2.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="27" name="Atlanta  Task 3 Falcons" tags="" position="2772,744" size="100,100">(set: $atlantaClue3 to 0) (if:visits &gt;= 1)[(set: $atlantaT3cmplt to true)]
 This is a cool stadium, whoever designed that roof structure was really onto something!  Lets take a very simple structure, and really complicate the building process so we can make more money, brilliant!  Glad we have the taxpayers footing that bill.  The Falcon&#39;s, always good enough to keep fans, but never good enough to win a playoff game, a perfect balance for profitability.  
@@ -297,10 +297,10 @@ TastyTroopTreats, Inc. has many agile teams workingon their software solution fo
 
 How can this be quickly addressed and resolved?
 
-[Assign a member from each team to meet together daily[[ Atlanta - 3.1 ]]]
-[During Program Increment planning reserve time for teams to meet and discuss dependencies[[ Atlanta - 3.2 ]]]
-[Hire a contractor to come in and plan out their dependencies[[ Atlanta - 3.3 ]]]
-[Go back to waterfall delivery, properly plan, test, validate, and verify the product before delivery[[ Atlanta - 3.4]]]
+A. Assign a member from each team to meet together daily[[ Atlanta - 3.1 ]]
+B. During Program Increment planning reserve time for teams to meet and discuss dependencies[[ Atlanta - 3.2 ]]
+C. Hire a contractor to come in and plan out their dependencies[[ Atlanta - 3.3 ]]
+D. Go back to waterfall delivery, properly plan, test, validate, and verify the product before delivery[[ Atlanta - 3.4]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="I&#39;m done in Orlando" tags="" position="1739,454" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
 (if: _allClues is 3)[{
@@ -324,9 +324,9 @@ You are admiring the really big clock when you get an urgent phone call from you
 Upon hearing your supervisor’s concern you respond.
 
 (if:visits &gt;= 1)[(set: $londonT1cmplt to true)]
-* Delay the PDR, we must wait until the design satisfies the CDD [[London - 1.1 - Delay the PDR]]
-* Continue as planned, the PDR is conducted to ensure new technologies are mature enough to be integrated into a product subsystem to form its allocated baseline [[London - 1.2 - PDRs are made for this]]
-* Continue as planned, we can’t afford the optics that we are slowing down. We can just hold a lien on PDR until the prime demonstrates the design satisfies the CDD. [[London - 1.3 - Have the PDR but stop there]]</tw-passagedata><tw-passagedata pid="30" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
+A. Delay the PDR, we must wait until the design satisfies the CDD [[London - 1.1 - Delay the PDR]]
+B. Continue as planned, the PDR is conducted to ensure new technologies are mature enough to be integrated into a product subsystem to form its allocated baseline [[London - 1.2 - PDRs are made for this]]
+C. Continue as planned, we can’t afford the optics that we are slowing down. We can just hold a lien on PDR until the prime demonstrates the design satisfies the CDD. [[London - 1.3 - Have the PDR but stop there]]</tw-passagedata><tw-passagedata pid="30" name="Boston - 1.1 - Fly, Fix, Fly" tags="" position="16,376" size="100,100">(set: $bostonClue1 to 0)
 
 You know, we should have the technician try her magic. This machinery was designed to precision, so it&#39;s gotta be some simple hardware problem. Could be some wire connected to the wrong place, or a bad capacitor.
 
@@ -388,7 +388,7 @@ Remember, at PDR, some technologies may still be immature, especially with regar
 The CDR provides the acquisition community with evidence that the system, down to the lowest system element level, has a reasonable expectation of satisfying the requirements of the system performance specification as derived from the Capability Development Document (CDD) within current cost and schedule constraints. At this point in the program, system performance expectations are based on analysis and any prototype testing/demonstration efforts conducted at the system element and/or system level. Demonstration of a complete system is not expected to be accomplished by this point.//
 
 (set: $londonClue1 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="1028,1290" size="100,100">Correct, can’t believe your boss didn’t know that. You should have his job.
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="971,1323" size="200,100">Correct, can’t believe your boss didn’t know that. You should have his job.
 
 Our program is expected to be somewhat immature at this point. Recall from the DAG that PDRs are intended to show a path towards complete system design maturity.
 
@@ -397,7 +397,7 @@ From the DAG:
 
 
 (set: $londonClue1 to 1)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="38" name="London - 1.3 - Have the PDR but stop there" tags="" position="1108,1455" size="100,100">Well, that PDR was fun. Good food, good friends. But you thought our program should not proceed any further? You might want to reaquaint yourself with the goal of a PDR.
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="38" name="London - 1.3 - Have the PDR but stop there" tags="" position="1108,1455" size="200,100">Well, that PDR was fun. Good food, good friends. But you thought our program should not proceed any further? You might want to reaquaint yourself with the goal of a PDR.
 
 From the DAG, a successful PDR demonstrates the preliminary design:
 
@@ -409,16 +409,16 @@ From the DAG, a successful PDR demonstrates the preliminary design:
 * Is fully captured and properly allocated in the specifications for each system element and all interface documentation (including system of systems (SoS) interdependencies).
 
 (set: $londonClue1 to 0)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="39" name="London - 2.2 - Proceed with the CDR" tags="" position="1525,1637" size="100,100">Not a very good answer. When has more attention from leadership due to poor performance ever helped?
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="39" name="London - 2.2 - Proceed with the CDR" tags="" position="1398,1562" size="200,100">Not a very good answer. When has more attention from leadership due to poor performance ever helped?
 
 (set: $londonClue2 to 0)
-[[London Heathrow]] </tw-passagedata><tw-passagedata pid="40" name="London - 2.1 - Skip the CDR" tags="" position="1418,1627" size="100,100">But wait, a CDR is not an optional thing. We can&#39;t just skip it. Our Milestone Decision Authority (MDA) will probably not like your answer.
+[[London Heathrow]] </tw-passagedata><tw-passagedata pid="40" name="London - 2.1 - Skip the CDR" tags="" position="1283,1587" size="100,100">But wait, a CDR is not an optional thing. We can&#39;t just skip it. Our Milestone Decision Authority (MDA) will probably not like your answer.
 
 (set: $londonClue2 to 0)
 [[London Heathrow]] </tw-passagedata><tw-passagedata pid="41" name="London - 2.3 - Delay the CDR" tags="" position="1634,1542" size="100,100">This makes sense. A disciplined systems engineering approach will reduce the likelihood of cost, schedule, and performance delays. Delaying the CDR until entrance criteria are met may pay off in the long run. Otherwise, you will be forced to track all the unmet criteria later.
 
 (set: $londonClue2 to 1)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="42" name="London - 3.4 - Proceed with the PRR" tags="" position="1915,1367" size="100,100">Good choice. This is why we have a PRR. From the DAG:
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="42" name="London - 3.4 - Proceed with the PRR" tags="" position="1915,1367" size="200,100">Good choice. This is why we have a PRR. From the DAG:
 //The Production Readiness Review (PRR) for the system determines whether the system design is ready for production, and whether the developer has accomplished adequate production planning for entering Low-Rate Initial Production (LRIP) and Full-Rate Production (FRP). Production readiness increases over time with incremental assessments accomplished at various points in the life cycle of a program.//
 
 (set: $londonClue3 to 1)
@@ -455,10 +455,10 @@ mascot to be placed on each packaging to distract the troops.
 Your task here is to verify that Snarky the Snail is on every MRE packaging.
 
 What method of verification and validation should be utilized?
-A.[ V&amp;V by Demonstration [[ Orlando 1.1 V&amp;V by Demo ]]]
-B.[ V&amp;V by Analysis [[ Orlando 1.2 V&amp;V by Analysis ]]]
-C.[ V&amp;V by Test [[ Orlando 1.3 V&amp;V by Test ]]]
-D.[ V&amp;V by Examination [[ Orlando 1.4 V&amp;V by Examination ]]]
+A. V&amp;V by Demonstration [[ Orlando 1.1 V&amp;V by Demo ]]
+B. V&amp;V by Analysis [[ Orlando 1.2 V&amp;V by Analysis ]]
+C. V&amp;V by Test [[ Orlando 1.3 V&amp;V by Test ]]
+D. V&amp;V by Examination [[ Orlando 1.4 V&amp;V by Examination ]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/disney family sticks.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="50" name="Orlando  Task 2 Gatorland" tags="" position="2571,278" size="100,100">(set: $orlandoClue2 to 0) (if:visits &gt;= 1)[(set: $orlandoT2cmplt to true)]
 
@@ -469,10 +469,10 @@ It looks like we’ve arrived well before the NST. It’s a good thing; I’ve b
 Fun fact: the folks at Gatorland helped design the packaging for our brand of MREs. Because they know the importance, and the possibility, of working with only one hand, they have helped build a better product. As a result, they redesigned and manufactured the outer wrapping of each product for ease of access. While I am more than happy to trust their lead engineer, Chubbs Peterson, you have some reservations about their quality. Your task here is to verify that the MRE packaging is able to easily be opened in under five (5) seconds.
 
 What method of verification and validation should be utilized?
-A.[ V&amp;V by Demonstration [[Orlando 2.1 V&amp;V by Demo]]
-B.[ V&amp;V by Analysis [[Orlando 2.2 V&amp;V by Analysis]]
-C.[ V&amp;V by Test [[Orllando 2.3 V&amp;V by Test]]
-D.[ V&amp;V by Examination [[Orlando 2.4 V&amp;V by Examination]]
+A. V&amp;V by Demonstration [[Orlando 2.1 V&amp;V by Demo]]
+B. V&amp;V by Analysis [[Orlando 2.2 V&amp;V by Analysis]]
+C. V&amp;V by Test [[Orllando 2.3 V&amp;V by Test]]
+D. V&amp;V by Examination [[Orlando 2.4 V&amp;V by Examination]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/gator.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="51" name="Orlando  Task 3 Kennedy Space Center" tags="" position="2977,218" size="200,100">(set: $orlandoClue3 to 0) (if:visits &gt;= 1)[(set: $orlandoT3cmplt to true)]
 
@@ -483,10 +483,10 @@ The NST agents are haggling with the parking attendant about what their definiti
 So, what brings us to the land of space legends? We are here to employ the skills of the NASA Space Food Research Lab when it comes to preserving pre-packaged foods. Someone didn’t do their homework, and apparently the lab is located in Houston instead. Fortunately, there is a satellite lab here at the Kennedy Space Center, which is a rather convenient plot hole. Nonetheless, we have a new variation of MRE in the works and we need to have them shelf-stable for an unreasonably long time because why not? Unless someone has an extra DeLorean sitting around, we need to harness the Lab’s data and longevity models to predict expiration dates. Your task here is to verify that the MRE have the ability to be shelf-stable for at least 35 years.
 
 What method of verification and validation should be utilized?
-A.[ V&amp;V by Demonstration [[Orlando 3.1 V&amp;V by Demo]]]
-B.[ V&amp;V by Analysis [[Orlando 3.2 V&amp;V by Analysis]]]
-C.[ V&amp;V by Test [[Orlando 3.3 V&amp;V by Test]]]
-D.[ V&amp;V by Examination [[Orlando 3.4 V&amp;V by Examination]]]
+A. V&amp;V by Demonstration [[Orlando 3.1 V&amp;V by Demo]]
+B. V&amp;V by Analysis [[Orlando 3.2 V&amp;V by Analysis]]
+C. V&amp;V by Test [[Orlando 3.3 V&amp;V by Test]]
+D. V&amp;V by Examination [[Orlando 3.4 V&amp;V by Examination]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/shuttle.gif&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="52" name=" Orlando 1.1 V&amp;V by Demo " tags="" position="2074,317" size="100,100">This wrong answer is stopping the right one from emerging! Way to go.
 
@@ -536,7 +536,7 @@ D.[ V&amp;V by Examination [[Orlando 3.4 V&amp;V by Examination]]]
 
 (set: $orlandoClue3 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name="Budapest - Ferenc Liszt International" tags="" position="1328,1762" size="100,100">You must be a lover of classical music! Franz List (Ferenc Liszt in Hungarian) was a Hungarian composer, virtuoso pianist, conductor, music teacher, arranger, and organist of the Romantic era. He was additionally a philanthropist, Hungarian nationalist, and Franciscan tertiary. 
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name="Budapest - Ferenc Liszt International" tags="" position="1328,1762" size="200,100">You must be a lover of classical music! Franz List (Ferenc Liszt in Hungarian) was a Hungarian composer, virtuoso pianist, conductor, music teacher, arranger, and organist of the Romantic era. He was additionally a philanthropist, Hungarian nationalist, and Franciscan tertiary. 
 
 But, before you take in a concert, you must continue preventing NST from destroying the (print: $programName)!
 
@@ -562,14 +562,14 @@ There&#39;s one more data point, though. Some other nations are looking at (prin
 What should we do?
 
 (if:visits &gt;= 1)[(set: $bpestT1cmplt to true)]
-[[Budapest - 1.1 - Not our problem]]
-[[Budapest - 1.2 - We Like Our Proprietary Stuff]]
-[[Budapest - 1.3 - Build the OSA]]
+A. [[Budapest - 1.1 - Not our problem]]
+B. [[Budapest - 1.2 - We Like Our Proprietary Stuff]]
+C. [[Budapest - 1.3 - Build the OSA]]
 
 
 //Heroes&#39; Square, is one of the major squares in Budapest, Hungary, noted for its iconic Millennium Monument with statues featuring the Seven chieftains of the Magyars and other important Hungarian national leaders, as well as the Memorial Stone of Heroes, often erroneously referred as the Tomb of the Unknown Soldier.//
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/heroes_square.jpg&quot; alt=&quot;Heroes Square picture&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="66" name="Budapest Task 2 - Hungarian Parliament Building" tags="" position="1756,1949" size="100,100">(if:visits &gt;= 1)[(set: $bpestT2cmplt to true)]
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/heroes_square.jpg&quot; alt=&quot;Heroes Square picture&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="66" name="Budapest Task 2 - Hungarian Parliament Building" tags="" position="1756,1949" size="200,100">(if:visits &gt;= 1)[(set: $bpestT2cmplt to true)]
 So, at your hotel, you noticed something. The durn cell phone charger can&#39;t use the electrical outlets here! Good thing the front desk has an adapter. Problem solved!
 
 //At 0130 hours, you wake up.//
@@ -586,9 +586,9 @@ You: OMG, Col Gates is gonna kill me, possibly using 230V electrical shocks thro
 
 Chet: You&#39;ve got a few options, before Col Gates electrifies your chair:
 
-[[Budapest - 2.1 - Adapters.com]]
-[[Budapest - 2.2 - Try to go back to sleep]]
-[[Budapest - 2.3 - Consult the Design Spec]]
+A. [[Budapest - 2.1 - Adapters.com]]
+B. [[Budapest - 2.2 - Try to go back to sleep]]
+C. [[Budapest - 2.3 - Consult the Design Spec]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/hungarian_parliament.jpg&quot; alt=&quot;Hungarian Parliament&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="67" name="Budapest Task 3 - Buda Castle" tags="" position="1403,1912" size="100,100">(if:visits &gt;= 1)[(set: $bpestT3cmplt to true)]
 
@@ -600,9 +600,9 @@ TastyTroopTreats engineers are pretty smart. Because they have experience in the
 
 What should we do?
 
-[[Budapest - 3.1 - Czech that box!]]
-[[Budapest - 3.2 - Not Gonna Do It]]
-[[Budapest - 3.3 - TastyTroopTreats Forever]]
+A. [[Budapest - 3.1 - Czech that box!]]
+B. [[Budapest - 3.2 - Not Gonna Do It]]
+C. [[Budapest - 3.3 - TastyTroopTreats Forever]]
 
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084,870" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
@@ -616,7 +616,7 @@ Value 3: //Player got them all right. Give legit clue.//
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Budapest. 
 (set: $CitiesVisited to $CitiesVisited + (a: &quot;Budapest&quot;))
-(set: $ourCities to $ourCities - (a:&quot;Budapest&quot;))
+(set: $ourCities to $ourCities - (a: &quot;Budapest&quot;))
 [[Travel to Dulles]] 
 
 (display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="69" name="Budapest - 1.1 - Not our problem" tags="" position="865,2183" size="100,100">You recommended to Col Gates that we tell the Hungarians that nothing can be done. Our program is too far along to add new users and their requirements.
@@ -628,7 +628,7 @@ Your lack of concern about a NATO partner suggests you may want to better unders
 Perhaps you should take some military professional development courses to understand some of these issues: [[Direct Flight to Maxwell Air Force Base]]
 
 (set: $bpestClue1 to 0)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="70" name="Budapest - 1.2 - We Like Our Proprietary Stuff" tags="" position="1078,2165" size="100,100">Well, this is not a terrible choice. It has some pros and cons.
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="70" name="Budapest - 1.2 - We Like Our Proprietary Stuff" tags="" position="1058,2123" size="200,100">Well, this is not a terrible choice. It has some pros and cons.
 
 Pros are:
 * TastyTroopTreats already has a functioning software suite for the design. It was inherited from a previous effort used in commercial industry.
@@ -655,14 +655,14 @@ There is some cost to your decision. TastyTroopTreats will need to implement the
 Good choice overall! It will pay dividends in the long run.
 
 (set: $bpestClue1 to 1)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="72" name="Budapest - 2.1 - Adapters.com" tags="" position="1708,2197" size="100,100">You found this site, Adapters.com. You can buy all the power adapters you need!
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="72" name="Budapest - 2.1 - Adapters.com" tags="" position="1686,2158" size="200,100">You found this site, Adapters.com. You can buy all the power adapters you need!
 
 Hmm, but you&#39;re a Systems Thinker. How would I know if these adapters will be durable enough? Can they handle the current load? Would they catch on fire? Fall out of the outlets?
 
 No worry, the reputable Chinese manufacture has some grainy photos of the adapters connected to a laptop. That should be good enough for our military and our international partners!
 
 (set: $bpestClue2 to 0)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="73" name="Budapest - 2.2 - Try to go back to sleep" tags="" position="1841,2208" size="100,100">If only you had a way of knowing. Chet had to leave the office, and said he would get back to you later. He&#39;d need to consult with this team to get the full story about electrical power interfaces.
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="73" name="Budapest - 2.2 - Try to go back to sleep" tags="" position="1906,2181" size="200,100">If only you had a way of knowing. Chet had to leave the office, and said he would get back to you later. He&#39;d need to consult with this team to get the full story about electrical power interfaces.
 
 It seems like modern technology should give us a means to document interfaces and specifications, ensuring systems are verified against these specs during Design Verification Testing.
 
@@ -671,7 +671,7 @@ You can&#39;t go back to sleep. Instead, you start your graduate thesis idea for
 While typing, an add appears in your browser about something called Cameo Systems Modeler, and how it supports something called SysML. What is that? Ooh, it&#39;s a product of Dassault! I should take a TDY to Paris!
 
 (set: $bpestClue2 to 0)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="74" name="Budapest - 2.3 - Consult the Design Spec" tags="" position="2000,2172" size="100,100">Whew! Fortunately, the (print: $programName) had a robust Model-Based Systems Engineering (MBSE) effort. You opened up SysML diagrams for each of the subsystems, and found some diagrams of the power interfaces.
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="74" name="Budapest - 2.3 - Consult the Design Spec" tags="" position="2011,2053" size="200,100">Whew! Fortunately, the (print: $programName) had a robust Model-Based Systems Engineering (MBSE) effort. You opened up SysML diagrams for each of the subsystems, and found some diagrams of the power interfaces.
 
 Turns out, when TastyTroopTreats specs out the subsystems, they require switched power supplies that can work on US or non-US power. Also, the SysML diagrams map these interfaces to spec compliance documents and specific Design Verification Tests (DVTs). The DVTs verify that subsystems indeed function properly with both power supply settings.
 
@@ -689,14 +689,14 @@ You could make a better choice. Let&#39;s learn about how we integrate with our 
 You need some education: [[Direct Flight to Maxwell Air Force Base]] 
 
 (set: $bpestClue3 to 0)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="76" name="Budapest - 3.3 - TastyTroopTreats Forever" tags="" position="1455,2209" size="100,100">The low risk solution! Let TastyTroopTreats use their own solution.
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="76" name="Budapest - 3.3 - TastyTroopTreats Forever" tags="" position="1363,2240" size="200,100">The low risk solution! Let TastyTroopTreats use their own solution.
 
 On one hand, it&#39;s expensive. But, it puts more burden on TastyTroopTreats to get it right. You may need to consult with your contracting and finance people to ensure TastyTroopTreats is held accountable if they cannot deliver. Because it&#39;s a design change, they may cry foul if their system cannot be made to work.
 
 This was a tough call. It may be a while before you know whether this was a good decision.
 
 (set: $bpestClue3 to 0.5)
-[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="77" name="Direct Flight to Maxwell Air Force Base" tags="" position="716,2113" size="100,100">(set: $bpestT1cmplt to false)
+[[Budapest - Ferenc Liszt International]] </tw-passagedata><tw-passagedata pid="77" name="Direct Flight to Maxwell Air Force Base" tags="" position="751,1959" size="200,100">(set: $bpestT1cmplt to false)
 
 Finally, a break from my day job! But wow it&#39;s hot here. August at Maxwell AFB!
 
@@ -777,8 +777,8 @@ Value 3: //Player got them all right. Give legit clue.//
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Denver. 
-(set: $CitiesVisited to $CitiesVisited + (a: &quot;Atlanta&quot;))
-(set: $ourCities to $ourCities - (a:&quot;Atlanta&quot;))
+(set: $CitiesVisited to $CitiesVisited + (a: &quot;Denver&quot;))
+(set: $ourCities to $ourCities - (a:&quot;Denver&quot;))
 
 [[Travel to Dulles]] 
 
@@ -791,10 +791,10 @@ You are enjoying the game, along with a soft pretzel, nachos, a hot dog, peanuts
 
 Upon hearing your supervisor’s story you respond:
 
-* Absolutely not, the KPPs were established by the Air Force customer and approved by the JROC. Any change now would require another round of JROC approval. [[Denver 1.1]]
-* This sounds like a great idea. We could spend a lot of time and money chasing a KPP when it is so much easier to change the KPP to align with our technical limits. [[Denver 1.2]]
-* Change the KPP. These parameters are really more just desirements than actual requirements so anybody can change one. [[Denver 1.3]]
-* Good idea! Your oversight in the Office of the Secretary of Defense encourages requirements to stay fluid throughout a system’s development. [[Denver 1.4]]</tw-passagedata><tw-passagedata pid="94" name="Denver Task 2 - Vail Ski Resort" tags="" position="2503,1575" size="100,100">(if:visits &gt;= 1)[(set: $denverT2cmplt to true)]
+A. Absolutely not, the KPPs were established by the Air Force customer and approved by the JROC. Any change now would require another round of JROC approval. [[Denver 1.1]]
+B. This sounds like a great idea. We could spend a lot of time and money chasing a KPP when it is so much easier to change the KPP to align with our technical limits. [[Denver 1.2]]
+C. Change the KPP. These parameters are really more just desirements than actual requirements so anybody can change one. [[Denver 1.3]]
+D. Good idea! Your oversight in the Office of the Secretary of Defense encourages requirements to stay fluid throughout a system’s development. [[Denver 1.4]]</tw-passagedata><tw-passagedata pid="94" name="Denver Task 2 - Vail Ski Resort" tags="" position="2503,1575" size="100,100">(if:visits &gt;= 1)[(set: $denverT2cmplt to true)]
 Congratulations, you made it to Vail Ski Resort! Just over there is where you can start panhandling to scrape together enough coin so you can buy a day pass for the ski lifts this weekend. At right around $220, many folks elect to put their children down as collateral (and disguise it as ski school).
 
 You have just begun to test out your ability to do pizza/French-fry when you get a frantic call from your supervisor. The NSTs have once again sewed confusion in the program office. They inserted language into the requirements document that states “the contractor may implement Human-Systems Integration domains”. Your supervisor is demanding that the Prime develop and implement of human systems integration plan.
@@ -802,11 +802,11 @@ You have just begun to test out your ability to do pizza/French-fry when you get
 What should you recommend to your supervisor?
 
 
-* The supervisor is right. It is never too late to give the prime additional requirements. [[Denver 2.1]]
-* Stick to your guns. The requirement is as clear as day that the prime may implement HSI. [[Denver 2.2]]
-* It is too late to add requirements without contract officer involvement. The use of “may” instead of “shall” is a dead giveaway that this was not meant to be a requirement. [[Denver 2.3]]
-* Good idea, requirements are really just for consideration, requirements should evolve and change over a system’s life. [[Denver 2.4]]
-</tw-passagedata><tw-passagedata pid="95" name="Denver Task 3 - US Air Force Academy" tags="" position="2881,1340" size="100,100">(if:visits &gt;= 1)[(set: $denverT3cmplt to true)]
+A. The supervisor is right. It is never too late to give the prime additional requirements. [[Denver 2.1]]
+B. Stick to your guns. The requirement is as clear as day that the prime may implement HSI. [[Denver 2.2]]
+C. It is too late to add requirements without contract officer involvement. The use of “may” instead of “shall” is a dead giveaway that this was not meant to be a requirement. [[Denver 2.3]]
+D. Good idea, requirements are really just for consideration, requirements should evolve and change over a system’s life. [[Denver 2.4]]
+</tw-passagedata><tw-passagedata pid="95" name="Denver Task 3 - US Air Force Academy" tags="" position="2881,1340" size="200,100">(if:visits &gt;= 1)[(set: $denverT3cmplt to true)]
 Welcome to the Air Force Academy in Colorado Springs, Colorado. The Academy is located at 7,258 feet above sea level, far-far above that of West Point or Annapolis. And you are going to love touring the cadet chapel. IT is truly an amazing structure…what’s that sign say? “Closed for Construction”! Wow, a $250M renovation, that won’t be done for years, darn! 
 
 Well, lots of other great outdoor sights to see at USAFA…quick get inside, it’s another afternoon thunderstorm and lightning is within five nautical miles! Well, at least this gives you a chance to meet up with the members of the Academy’s System Engineering Council. They steer the SE program and keep things up to date as representatives from multiple academic departments.
@@ -815,10 +815,10 @@ You are meeting with the SE Council when you get a call from your supervisor. On
 
 How do you respond to this latest development?
 
-* Nothing to worry about. Threshold KPP values are only a “nice-to-have” level of performance. The system will meet its requirements even if it falls short of the threshold. [[Denver 3.1]]
-* Might be time to start updating your resume. Missing threshold KPP values could kill a program if the cost and schedule overruns are not acceptable to Air Force leadership! [[Denver 3.2]]
-* The PMs have it all wrong because there is not relationship between cost, schedule, and performance. Why would additional engineering required to solve KPP shortfalls drive extra cost and schedule?  [[Denver 3.3]]
-* I don’t see what the big problem is, a Key Performance Parameter is not a very important performance requirement. We could fall short of several KPPs and still pass the Production Readiness Review.  [[Denver 3.4]]
+A. Nothing to worry about. Threshold KPP values are only a “nice-to-have” level of performance. The system will meet its requirements even if it falls short of the threshold. [[Denver 3.1]]
+B. Might be time to start updating your resume. Missing threshold KPP values could kill a program if the cost and schedule overruns are not acceptable to Air Force leadership! [[Denver 3.2]]
+C. The PMs have it all wrong because there is not relationship between cost, schedule, and performance. Why would additional engineering required to solve KPP shortfalls drive extra cost and schedule?  [[Denver 3.3]]
+D. I don’t see what the big problem is, a Key Performance Parameter is not a very important performance requirement. We could fall short of several KPPs and still pass the Production Readiness Review.  [[Denver 3.4]]
 </tw-passagedata><tw-passagedata pid="96" name="Denver 1.1" tags="" position="1993,1812" size="100,100">Wrong, I hope you like explaining your decisions to Generals at the Pentagon.
 
 KPPs are established in the program&#39;s Capability Development Document (CDD), which is the formal statement of user requirements signed by the Joint or Service Requirements Oversight Council. Changes to KPPs can be made, but this requires a formal review process by Service or Joint requirements stakeholders.
@@ -909,7 +909,7 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 
 &lt;!-- Lastly, reset the clue draw to invalid. --&gt;
 (set: $drawCorrectClue to 2)
-</tw-passagedata><tw-passagedata pid="110" name="Game Setup" tags="" position="213,32" size="100,100">{(set: $gameTestMode to true)
+</tw-passagedata><tw-passagedata pid="110" name="Game Setup" tags="" position="213,32" size="100,100">{(set: $gameTestMode to false)
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
 (set: $drawCorrectClue to 2) &lt;!-- set value 2 (invalid) on purpose --&gt;
