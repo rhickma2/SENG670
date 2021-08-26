@@ -93,7 +93,15 @@ Go to your task list:
 Where in the SPO is Systems Engineering?
 
 Begin your quest!
-[[Calling all Systems Engineers]] </tw-passagedata><tw-passagedata pid="9" name="Boston Task 1 Fenway" tags="" position="156,243" size="100,100">(set: $bostonClue1 to 0) (if:visits &gt;= 1)[(set: $bostonT1cmplt to true)]
+[[Calling all Systems Engineers]] 
+
+
+---
+
+//For information about this game, and other fine products from Summer 2021 Group 8, visit [[About this game]]//
+
+//Upgrade to &quot;Where in the JPO is Systems Engineering&quot; the exciting, more expensive, and more frustrating sequel to &quot;Where in the SPO&quot;.
+[[Upgrade Today]]//</tw-passagedata><tw-passagedata pid="9" name="Boston Task 1 Fenway" tags="" position="156,243" size="100,100">(set: $bostonClue1 to 0) (if:visits &gt;= 1)[(set: $bostonT1cmplt to true)]
 The (print: $programName) inventory distribution machine is complicated. It automatically loads MREs into boxes destined for military locations around the world. And, the system has a variable throughput, based on demand. If demand is high, it can process and pack a lot of MREs at once. If demand is lower, it works slower to save wear and tear on the machinery.
 
 Deep in the control computer is some fancy artificial intelligence that keeps track of demand coming in from the worldwide inventory ordering system. When troops are hungry for prepackaged mac an&#39; cheese, it knows where to send them and predicts future demand.
@@ -188,12 +196,8 @@ Good choice. You should bring this up with the developers.
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m done in Boston" tags="" position="1161,368" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Boston.
@@ -202,7 +206,7 @@ Okay, you are done in Boston.
 
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27" size="100,100">(background:#c0c0c0)[//DEBUG HEADER is running//{
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27" size="100,100">{(background:#c0c0c0)[//DEBUG HEADER is running//{
 (display: &quot;Game Setup&quot;)
 &lt;!-- (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
@@ -210,27 +214,19 @@ Okay, you are done in Boston.
 (set: $bostonClue1 to 0)
 (set: $bostonClue2 to 1)
 (set: $bostonClue3 to 1)}
-]</tw-passagedata><tw-passagedata pid="21" name="I&#39;m done in London" tags="" position="1329,870" size="100,100">{{(set: _allClues to $londonClue1 + $londonClue2 + $londonClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+]}</tw-passagedata><tw-passagedata pid="21" name="I&#39;m done in London" tags="" position="1329,870" size="100,100">{(set: _allClues to $londonClue1 + $londonClue2 + $londonClue3)
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in London. 
 (set: $CitiesVisited to $CitiesVisited + (a: &quot;London&quot;))
-(set: $ourCities to $ourCities - (a:&quot;London&quot;))
+(set: $ourCities to $ourCities - (a: &quot;London&quot;))
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="1762,696" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="1763.6666666666667,696" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Atlanta. 
@@ -307,12 +303,8 @@ C. Hire a contractor to come in and plan out their dependencies[[ Atlanta - 3.3 
 D. Go back to waterfall delivery, properly plan, test, validate, and verify the product before delivery[[ Atlanta - 3.4]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="I&#39;m done in Orlando" tags="" position="1739,454" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Orlando. 
@@ -349,15 +341,15 @@ Okay, let&#39;s hope this was a fluke. Sometimes things just don&#39;t work righ
 Wish we could be sure this wouldn&#39;t happen again. Anyway, back to the airport.
 
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="32" name="Boston - 1.3 - Model the Problem" tags="" position="205,376" size="200,100">(set: $bostonClue1 to 1)
-Interesting choice. The machine manufacturer has a digital model of the inventory distribution system. Let&#39;s call the chief systems engineer, Mr. Boyardee, at TastyTroopTreats, Inc. to see what he says.
+Interesting choice. The machine manufacturer has a digital model of the inventory distribution system. Let&#39;s call the chief systems engineer, Mr. Chet Boyardee, at TastyTroopTreats, Inc. to see what he says.
 
-Mr Boyardee: &quot;Cliff Boyardee, TastyTroopTreats.&quot;
-You: &quot;Cliff, hey it&#39;s your favorite government Systems Engineer! We got a problem. In the test facility this week, the machine started tossing MREs like the Swedish Cheff in a Muppet Show skit. Does it always do this?&quot;
+Mr Boyardee: &quot;Chet Boyardee, TastyTroopTreats.&quot;
+You: &quot;Chet, hey it&#39;s your favorite government Systems Engineer! We got a problem. In the test facility this week, the machine started tossing MREs like the Swedish Cheff in a Muppet Show skit. Does it always do this?&quot;
 Mr Boyardee: &quot;Hmm. No. That&#39;s a new feature. But, now that you mention it, last week we ran some simulations using our digital models of the machinery. Those simulations were supposed to mimic the conditions they were testing this week. Let me get Jane on the phone, she ran the models.&quot;
 ...
 Jane: &quot;Oh yeah, our simulations uncovered some errors in the conveyer belt control firmware. A supplier had to swap out a speed sensor that was no longer produced with a newer model. But the newer model reported information differently. The digital model showed all kinds of crazy behavior. Our firmware team has a new load with the necessary fixes.&quot;
 Mr Boyardee: &quot;Darn it Jane! Why didn&#39;t I know about this?&quot;
-Jane: &quot;Cliff, we told you at Monday&#39;s staff meeting. Remember our conversation about the flying MRE conditions?&quot;
+Jane: &quot;Chet, we told you at Monday&#39;s staff meeting. Remember our conversation about the flying MRE conditions?&quot;
 Mr Boyardee: &quot;Oh, so that&#39;s what you were talking about!&quot;
 You: &quot;Ok folks. Sounds like we just need to upload a firmware fix.&quot;
 Jane: &quot;Yep. That&#39;s already scheduled for Thursday morning, and we plan on re-running the tests.&quot;
@@ -394,7 +386,7 @@ Remember, at PDR, some technologies may still be immature, especially with regar
 The CDR provides the acquisition community with evidence that the system, down to the lowest system element level, has a reasonable expectation of satisfying the requirements of the system performance specification as derived from the Capability Development Document (CDD) within current cost and schedule constraints. At this point in the program, system performance expectations are based on analysis and any prototype testing/demonstration efforts conducted at the system element and/or system level. Demonstration of a complete system is not expected to be accomplished by this point.//
 
 (set: $londonClue1 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="971,1323" size="200,100">Correct, can’t believe your boss didn’t know that. You should have his job.
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="37" name="London - 1.2 - PDRs are made for this" tags="" position="971,1323" size="200,100">Correct, you can’t believe Col Gates didn’t know that. You could have her job!
 
 Our program is expected to be somewhat immature at this point. Recall from the DAG that PDRs are intended to show a path towards complete system design maturity.
 
@@ -453,7 +445,11 @@ The PCA is an event-driven technical assessment that typically occurs during the
 
 (set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="48" name="DFW International" tags="" position="304,1315" size="200,100">&lt;!-- DEBUG CODE (set: $finaleCity to &quot;All Done&quot;)  --&gt;
 (if: $finaleCity is not &quot;All Done&quot;)[
-OK, you&#39;ve made it.  Use your clues to decide what should be your final destination! Your clues are:
+OK, you&#39;ve made it. Tomorrow is an important program meeting. You need to make your DTS reservations ASAP! Col Gates mentioned a few weeks ago where the meeting would take place, but you forgot. Fortunately, you picked up clues along the way to remind you!
+
+Use your clues to determine where your program meeting will take place! If your clues seem ambiguous or contradictory, that means you might have picked up some distracting information in a previous city! NST syndicate has a very effective disinformation team!
+
+Your clues are:
 (print: $ClueArray)
 Select your destination. Good luck, there is no going back!
 [[Nellis AFB]]
@@ -555,7 +551,9 @@ D. V&amp;V by Examination [[Orlando 3.4 V&amp;V by Examination]]
 
 (set: $orlandoClue3 to 0)
 
-[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name="Budapest - Ferenc Liszt International" tags="" position="1328,1762" size="200,100">You must be a lover of classical music! Franz List (Ferenc Liszt in Hungarian) was a Hungarian composer, virtuoso pianist, conductor, music teacher, arranger, and organist of the Romantic era. He was additionally a philanthropist, Hungarian nationalist, and Franciscan tertiary. 
+[[Orlando International]] </tw-passagedata><tw-passagedata pid="64" name="Budapest - Ferenc Liszt International" tags="" position="1328,1762" size="200,100">Welcome to Ferenc Liszt International airport!
+
+You must be a lover of classical music! Franz List (Ferenc Liszt in Hungarian) was a Hungarian composer, virtuoso pianist, conductor, music teacher, arranger, and organist of the Romantic era. He was additionally a philanthropist, Hungarian nationalist, and Franciscan tertiary. 
 
 But, before you take in a concert, you must continue preventing NST from destroying the (print: $programName)!
 
@@ -625,12 +623,8 @@ C. [[Budapest - 3.3 - TastyTroopTreats Forever]]
 
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084,870" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+(if: _allClues &gt; 2)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Budapest. 
@@ -787,12 +781,8 @@ Go to your task list:
 [[I&#39;m done in Denver]]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="92" name="I&#39;m done in Denver" tags="" position="1636,950" size="100,100">{(set: _allClues to $denverClue1 + $denverClue2 + $denverClue3)
-(if: _allClues is 3)[{
-Value 3: //Player got them all right. Give legit clue.//
-(set: $drawCorrectClue to 1)
-}]
-(else:)[Value &lt;3: //Player got at least one wrong or did not answer.//
-(set: $drawCorrectClue to 0)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
 Okay, you are done in Denver. 
@@ -981,7 +971,43 @@ It&#39;s back to school for you, my friend. Col Della Gates has been asked to re
 
 There is hope. Systems thinking is both art and science. Science, mathematical analysis, and domain-specific engineering principles will define your design&#39;s performance capabilities and constraints. A good systems engineer must consider these attributes in the context of the wholistic systems environment: the user&#39;s environment, the budget environment, the threat environment, the corporate environment, and the defense bureaucratic environment. That is the art of systems thinking.
 
-With experience and education, you can improve your systems thinking prowess. Maybe those Marines will give you a second chance one day! On your next assignment to Cannon AFB, we highly recommend you attend AFIT virtually and enroll in their Systems Engineering courses!  By the way your report NLT is in 4 days, so get packing!</tw-passagedata></tw-storydata>
+With experience and education, you can improve your systems thinking prowess. Maybe those Marines will give you a second chance one day! On your next assignment to Cannon AFB, we highly recommend you attend AFIT virtually and enroll in their Systems Engineering courses!  By the way your report NLT is in 4 days, so get packing!</tw-passagedata><tw-passagedata pid="114" name="About this game" tags="" position="850.0000000000001,26.66666666666663" size="100,100">&#39;&#39;Gameplay:&#39;&#39;
+The player navigates through a set of randomly selected cities, addressing different systems engineering challenges associated with your program. Upon completion of all tasks in each city, the player gets a clue. Depending on how well the player addresses the tasks at each city, they will be presented with either an informative clue or a distractor clue.
+
+Once all cities have been completed, the user will proceed to another aiport. Using their available clues, they must determine the location of an important program meeting. If they have all informative clues, the location should be obvious. If they have a mixture of informative and distractor clues, the choice may be more difficult. Arriving at the correct location for this important meeting will ensure the NST crime syndicate does not get your program cancelled!
+
+The gameplay model is paterned loosely on the 1980s/90s-vintage &quot;Where in the World is Carmen Sandiego&quot; PC games.
+
+&#39;&#39;Important Characters:&#39;&#39;
+* A protagonist: you, the systems engineer
+* A complicating character: Col Della Gates, your program manager
+* An antagonist: Non-Systems Thinkers (NST) crime syndicate
+
+&#39;&#39;Learning Principles:&#39;&#39;
+This game was built to teach various systems engineering principles, including:
+* System-of-systems interfaces, interoperability, and distributed computing
+* System verification and validation activities
+* System requirements development and tracking during design
+* Important technical reviews in the DoD acquisition process
+* Application of Open Systems Architectures in systems-of-systems
+
+&#39;&#39;Target Audience&#39;&#39;:
+This game is meant for a junior engineer, because it presents a wide breadth of topics having limited depth. The &quot;hub-spoke&quot; game design would allow additional cities to be added covering additional topics. Also, the depth of the game could be easily extended by requiring the player to drill further into the tasks presented in each city. Adding depth and breadth would require minimal changes to the Twine/Harlowe navigation mechanics employed in our game.
+
+&#39;&#39;End User License Agreement&#39;&#39;:
+The user of this game, referred to herein as //the player// agrees to assign only high ratings to this game in the SENG 670 evaluation rubric. If //the player// asigns a low rating in any category, //Summer 2021 Group 8// reserves the right to cancel your account and deny you access to our obviously awesome game.
+
+This game comes with no warranty, expressed or implied.
+
+Now back to the game!
+[[Where in the SPO?]] </tw-passagedata><tw-passagedata pid="115" name="Upgrade Today" tags="" position="972.3333333333333,134.66666666666666" size="100,100">To upgrade to &quot;Where in the JPO&quot;, please send a hard drive with 1000 bitcoin to:
+
+Group 8 Enterprises
+100 Systems Way
+George Town, Cayman Islands
+
+Back to the game!
+[[Where in the SPO?]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
