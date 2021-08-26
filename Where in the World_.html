@@ -224,7 +224,7 @@ Okay, you are done in London.
 (set: $ourCities to $ourCities - (a: &quot;London&quot;))
 [[Travel to Dulles]] 
 
-(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="1763.6666666666667,696" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
+(display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="1763,696" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
 (if: _allClues is 3)[(set: $drawCorrectClue to 1)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
@@ -899,7 +899,7 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 &lt;!-- get the correct finale city --&gt;
 (set: _myfinale to (either: ...$finaleCityWrong))]
 (else: )[DEBUG: Nothing happens. (set: _isValid to false)]
-}
+
 &lt;!-- DEBUG: The chosen finale city: (print: _myfinale) --&gt;
 
 (if: _isValid is true)[
@@ -922,6 +922,7 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 
 &lt;!-- Lastly, reset the clue draw to invalid. --&gt;
 (set: $drawCorrectClue to 2)
+}
 </tw-passagedata><tw-passagedata pid="110" name="Game Setup" tags="" position="213,32" size="100,100">{(set: $gameTestMode to false)
 (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
 (set: $programName to &quot;DoorSpeed MRE Delivery System&quot;)
@@ -971,7 +972,7 @@ It&#39;s back to school for you, my friend. Col Della Gates has been asked to re
 
 There is hope. Systems thinking is both art and science. Science, mathematical analysis, and domain-specific engineering principles will define your design&#39;s performance capabilities and constraints. A good systems engineer must consider these attributes in the context of the wholistic systems environment: the user&#39;s environment, the budget environment, the threat environment, the corporate environment, and the defense bureaucratic environment. That is the art of systems thinking.
 
-With experience and education, you can improve your systems thinking prowess. Maybe those Marines will give you a second chance one day! On your next assignment to Cannon AFB, we highly recommend you attend AFIT virtually and enroll in their Systems Engineering courses!  By the way your report NLT is in 4 days, so get packing!</tw-passagedata><tw-passagedata pid="114" name="About this game" tags="" position="850.0000000000001,26.66666666666663" size="100,100">&#39;&#39;Gameplay:&#39;&#39;
+With experience and education, you can improve your systems thinking prowess. Maybe those Marines will give you a second chance one day! On your next assignment to Cannon AFB, we highly recommend you attend AFIT virtually and enroll in their Systems Engineering courses!  By the way your report NLT is in 4 days, so get packing!</tw-passagedata><tw-passagedata pid="114" name="About this game" tags="" position="850,26" size="100,100">&#39;&#39;Gameplay:&#39;&#39;
 The player navigates through a set of randomly selected cities, addressing different systems engineering challenges associated with your program. Upon completion of all tasks in each city, the player gets a clue. Depending on how well the player addresses the tasks at each city, they will be presented with either an informative clue or a distractor clue.
 
 Once all cities have been completed, the user will proceed to another aiport. Using their available clues, they must determine the location of an important program meeting. If they have all informative clues, the location should be obvious. If they have a mixture of informative and distractor clues, the choice may be more difficult. Arriving at the correct location for this important meeting will ensure the NST crime syndicate does not get your program cancelled!
@@ -1000,7 +1001,7 @@ The user of this game, referred to herein as //the player// agrees to assign onl
 This game comes with no warranty, expressed or implied.
 
 Now back to the game!
-[[Where in the SPO?]] </tw-passagedata><tw-passagedata pid="115" name="Upgrade Today" tags="" position="972.3333333333333,134.66666666666666" size="100,100">To upgrade to &quot;Where in the JPO&quot;, please send a hard drive with 1000 bitcoin to:
+[[Where in the SPO?]] </tw-passagedata><tw-passagedata pid="115" name="Upgrade Today" tags="" position="972,134" size="100,100">To upgrade to &quot;Where in the JPO&quot;, please send a hard drive with 1000 bitcoin to:
 
 Group 8 Enterprises
 100 Systems Way
