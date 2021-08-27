@@ -198,7 +198,7 @@ Good choice. You should bring this up with the developers.
 Wow, you are a heartless manager! Not only has the team found higher paying jobs, but you still don&#39;t know why the computer cannot communicate with the machinery.
 
 [[Boston Logan]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m done in Boston" tags="" position="1161,368" size="100,100">{(set: _allClues to $bostonClue1 + $bostonClue2 + $bostonClue3)
-(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -210,15 +210,12 @@ Okay, you are done in Boston.
 
 (display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27" size="100,100">{(background:#c0c0c0)[//DEBUG HEADER is running//{
 (display: &quot;Game Setup&quot;)
-&lt;!-- (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
-(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
-&quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedYes,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo)) --&gt;
 (set: $ClueArray to (a:&quot;A clue&quot;,&quot;Another clue&quot;,&quot;a final clue&quot;))
 (set: $bostonClue1 to 0)
 (set: $bostonClue2 to 1)
 (set: $bostonClue3 to 1)}
 ]}</tw-passagedata><tw-passagedata pid="21" name="I&#39;m done in London" tags="" position="1329,870" size="100,100">{(set: _allClues to $londonClue1 + $londonClue2 + $londonClue3)
-(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -228,7 +225,7 @@ Okay, you are done in London.
 [[Travel to Dulles]] 
 
 (display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="22" name="I&#39;m done in Atlanta" tags="" position="1763,696" size="100,100">{(set: _allClues to $atlantaClue1 + $atlantaClue2 + $atlantaClue3)
-(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -306,7 +303,7 @@ C. Hire a contractor to come in and plan out their dependencies[[ Atlanta - 3.3 
 D. Go back to waterfall delivery, properly plan, test, validate, and verify the product before delivery[[ Atlanta - 3.4]]
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/falcon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="I&#39;m done in Orlando" tags="" position="1739,454" size="100,100">{(set: _allClues to $orlandoClue1 + $orlandoClue2 + $orlandoClue3)
-(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -438,7 +435,7 @@ The PCA is an event-driven technical assessment that typically occurs during the
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
-(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="46" name="Eglin AFB" tags="" position="331,1570" size="100,100">(display: &quot;No Back&quot;)(if: $finaleCity is &quot;Eglin AFB&quot;)[Welcome to Eglin AFB!
+(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="46" name="Eglin AFB" tags="" position="331,1571.6666666666667" size="100,100">(display: &quot;No Back&quot;)(if: $finaleCity is &quot;Eglin AFB&quot;)[Welcome to Eglin AFB!
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
@@ -446,7 +443,10 @@ The PCA is an event-driven technical assessment that typically occurs during the
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
-(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="48" name="DFW International" tags="" position="304,1315" size="200,100">&lt;!-- DEBUG CODE (set: $finaleCity to &quot;All Done&quot;)  --&gt;
+(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="48" name="DFW International" tags="" position="302.3333333333333,1315" size="200,100">{&lt;!-- DEBUG CODE (set: $finaleCity to &quot;All Done&quot;)  --&gt;
+&lt;!-- If player did not get at least one correct clue, do not allow them
+to guess correctly --&gt;
+(if: $atLeastOneCorrect is false)[(set: $finaleCity to &quot;You failed&quot;)]}
 (if: $finaleCity is not &quot;All Done&quot;)[
 OK, you&#39;ve made it. Tomorrow is an important program meeting. You need to make your DTS reservations ASAP! Col Gates mentioned a few weeks ago where the meeting would take place, but you forgot. Fortunately, you picked up clues along the way to remind you!
 
@@ -627,7 +627,7 @@ C. [[Budapest - 3.3 - TastyTroopTreats Forever]]
 
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/buda_castle.jpg&quot; alt=&quot;Buda Castle&quot;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="68" name="I&#39;m done in Budapest" tags="" position="1084,870" size="100,100">{(set: _allClues to $bpestClue1 + $bpestClue2 + $bpestClue3)
-(if: _allClues &gt; 2)[(set: $drawCorrectClue to 1)]
+(if: _allClues &gt; 2)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -788,7 +788,7 @@ Go to your task list:
 [[I&#39;m done in Denver]]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="92" name="I&#39;m done in Denver" tags="" position="1636,950" size="100,100">{(set: _allClues to $denverClue1 + $denverClue2 + $denverClue3)
-(if: _allClues is 3)[(set: $drawCorrectClue to 1)]
+(if: _allClues is 3)[(set: $drawCorrectClue to 1)(set: $atLeastOneCorrect to true)]
 (else:)[(set: $drawCorrectClue to 0)]
 }
 (display: &quot;Get A Clue&quot;)
@@ -945,6 +945,7 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 (set: _finaleCities to (shuffled: &quot;Eglin AFB&quot;, &quot;Nellis AFB&quot;, &quot;Vandenberg SFB&quot;))
 &lt;!-- Shuffled finale cities: (print: _finaleCities) --&gt;
 (set: $finaleCity to _finaleCities&#39;s 1st)
+(set: $atLeastOneCorrect to false)
 (set: $finaleCityWrong to _finaleCities&#39;s (a:2,3))
 (set: $finaleCityWrong to $finaleCityWrong + (a:&quot;Nowhere&quot;,&quot;Nowhere&quot;,&quot;Nowhere&quot;,&quot;Nowhere&quot;))
 &lt;!-- DEBUG: Finale City will be: (print: $finaleCity) --&gt;
