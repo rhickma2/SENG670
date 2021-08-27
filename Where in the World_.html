@@ -90,7 +90,7 @@ Go to your task list:
 [[I&#39;m done in Orlando]]
 
 (display:&quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="8" name="Where in the SPO?" tags="" position="1414,103" size="100,100">(display: &quot;Game Setup&quot;)
-Where in the SPO is Systems Engineering?
+&#39;&#39;Where in the SPO is Systems Engineering?&#39;&#39;
 
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;./images/SPO-Icon.jpeg&quot; alt=&quot;uh-oh&quot;&gt;&lt;/p&gt;
 
@@ -156,8 +156,8 @@ Cities Visited:
 (print: $CitiesVisited)
 Cities remaining: (print: $ourCities)
 
-Your clues:
-(print: $ClueArray)
+Your clues: (for: each _item, ...$ClueArray)[
+(print: _item)]
 </tw-passagedata><tw-passagedata pid="13" name="Boston - 3.1 - Computer Validation" tags="" position="919,545" size="100,100">(set: $bostonClue3 to 0)
 System validation describes tests to determine whether a system meets the intended user requirements. Validation assesses &quot;was the right system built?&quot;. System //verification// determines whether a system or component was built to a design specification. Verification assesses &quot;was the system built right?&quot;.
 
@@ -211,8 +211,9 @@ Okay, you are done in Boston.
 (display: &quot;MyDashboard&quot;)</tw-passagedata><tw-passagedata pid="20" name="Debug Header" tags="debug-header" position="577,27" size="100,100">{(background:#c0c0c0)[//DEBUG HEADER is running//{
 (display: &quot;Game Setup&quot;)
 &lt;!-- (set: $visitedNo to &quot;Not Yet&quot;)(set: $visitedYes to &quot;Done that!&quot;)
-(set: $ClueArray to (a:))(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
+(set: $CitiesVisited to (dm:&quot;Boston&quot;,$visitedNo,
 &quot;London&quot;,$visitedNo,&quot;Atlanta&quot;,$visitedYes,&quot;Orlando&quot;,$visitedNo,&quot;LosAngeles&quot;,$visitedNo)) --&gt;
+(set: $ClueArray to (a:&quot;A clue&quot;,&quot;Another clue&quot;,&quot;a final clue&quot;))
 (set: $bostonClue1 to 0)
 (set: $bostonClue2 to 1)
 (set: $bostonClue3 to 1)}
@@ -433,15 +434,15 @@ From the DAG:
 The PCA is an event-driven technical assessment that typically occurs during the Production and Deployment (P&amp;D) phase, after successful system validation but prior to the Full-Rate Production Decision Review (FRP DR). A PCA conducted during FRP may miss the opportunity to avoid costly defects built into production. While the system-level PCA typically occurs before the FRP DR, other system element PCAs may be conducted at various points in advance of the system-level PCA.//
 
 (set: $londonClue3 to 0)
-[[London Heathrow]]</tw-passagedata><tw-passagedata pid="45" name="Nellis AFB" tags="" position="102,1565" size="100,100">(if: $finaleCity is &quot;Nellis AFB&quot;)[Welcome to Nellis AFB!
+[[London Heathrow]]</tw-passagedata><tw-passagedata pid="45" name="Nellis AFB" tags="" position="102,1565" size="100,100">(display: &quot;No Back&quot;)(if: $finaleCity is &quot;Nellis AFB&quot;)[Welcome to Nellis AFB!
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
-(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="46" name="Eglin AFB" tags="" position="331,1570" size="100,100">(if: $finaleCity is &quot;Eglin AFB&quot;)[Welcome to Eglin AFB!
+(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="46" name="Eglin AFB" tags="" position="331,1570" size="100,100">(display: &quot;No Back&quot;)(if: $finaleCity is &quot;Eglin AFB&quot;)[Welcome to Eglin AFB!
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
-(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="47" name="Vandenberg SFB" tags="" position="556,1568" size="200,100">(if: $finaleCity is &quot;Vandenberg SFB&quot;)[Welcome to Vandenberg SFB!
+(set: $finaleCity to &quot;All Done&quot;)</tw-passagedata><tw-passagedata pid="47" name="Vandenberg SFB" tags="" position="556,1568" size="200,100">(display: &quot;No Back&quot;)(if: $finaleCity is &quot;Vandenberg SFB&quot;)[Welcome to Vandenberg SFB!
 (display: &quot;Great Job&quot;)]
 (else: )[(display: &quot;Not so good&quot;)]
 
@@ -451,8 +452,9 @@ OK, you&#39;ve made it. Tomorrow is an important program meeting. You need to ma
 
 Use your clues to determine where your program meeting will take place! If your clues seem ambiguous or contradictory, that means you might have picked up some distracting information in a previous city! NST syndicate has a very effective disinformation team!
 
-Your clues are:
-(print: $ClueArray)
+Your clues are: (for: each _item, ...$ClueArray)[
+(print: _item)]
+
 Select your destination. Good luck, there is no going back!
 [[Nellis AFB]]
 [[Eglin AFB]]
@@ -772,8 +774,11 @@ CORRECT!  Want a star sticker?
 Well nice try Sally, but we don&#39;t have that kind of scratch or time.  FAIL
 
 [[Atlanta Hartsfield-Jackson]] </tw-passagedata><tw-passagedata pid="91" name="Denver" tags="" position="2219,1412" size="100,100">(if: visits is 1)[(set: $denverT1cmplt to false)(set: $denverT2cmplt to false)(set: $denverT3cmplt to false)]
+Denver, the Mile High City! You know, there are lots of other cities that are at least one mile above sea level. For example, Albuquerque, NM is 5,312 ft above sea level. Flagstaff, AZ is 6,910 ft above sea level!
 
-You must complete three tasks while here in Denver. After completing the three tasks, you should travel back to Dulles for another assignment.
+But, Denver has the Broncos, and those cities certaintly do NOT have the Broncos!
+
+Anyway, back to our serious Systems Engineering job. You must complete three tasks while here in Denver. After completing the three tasks, you should travel back to Dulles for another assignment.
 
 Go to your task list:
 (if: $denverT1cmplt is false)[ [[Denver Task 1 - Coors Field]] ]
@@ -941,7 +946,9 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 &lt;!-- Shuffled finale cities: (print: _finaleCities) --&gt;
 (set: $finaleCity to _finaleCities&#39;s 1st)
 (set: $finaleCityWrong to _finaleCities&#39;s (a:2,3))
+(set: $finaleCityWrong to $finaleCityWrong + (a:&quot;Nowhere&quot;,&quot;Nowhere&quot;,&quot;Nowhere&quot;,&quot;Nowhere&quot;))
 &lt;!-- DEBUG: Finale City will be: (print: $finaleCity) --&gt;
+&lt;!-- DEBUG CODE: Finale City wrong: (print: $finaleCityWrong) --&gt;
 (set: $clueDataMap to (dm: &quot;Eglin AFB&quot;,(a:),&quot;Nellis AFB&quot;,(a:),&quot;Vandenberg SFB&quot;,(a:)))
 &lt;!-- Eglin setup --&gt;
 (set: _tmparray to (shuffled: &quot;It sure is hot and sandy here.&quot;, &quot;Have you ever eaten at a Shrimp Basket?&quot;, &quot;I could live the Salt Life!&quot;, &quot;What should we do if there is a hurricane warning?&quot;))
@@ -953,6 +960,9 @@ Values: 0: incorrect clue, 1: correct clue, (other): invalid --&gt;
 (set: _tmparray to (shuffled: &quot;I went swimming at the beach. Is the water always that cold?&quot;, &quot;Buck Rogers, your on-base quarters are ready.&quot;, &quot;Okay, okay! I will be there in a minute, man!&quot;, &quot;Seems risky to launch billion dollar satellites. I bet that&#39;s a heck of an insurance premium!&quot;)
 )
 (set: &quot;Vandenberg SFB&quot; of $clueDataMap to _tmparray)
+&lt;!-- Garbage clues setup --&gt;
+(set: _tmparray to (shuffled: &quot;The few, the proud, the Marines!&quot;,&quot;Aim high, Air Force!&quot;,&quot;You and the Navy, full speed ahead!&quot;,&quot;Be all that you can be, in the Army!&quot;,&quot;The adventures of KI Sawyer: a boy from Michigan paddles across Lake Superior.&quot;,&quot;There once was a base named Loring. It really was quite boring.&quot;,&quot;Despite its name, Castle AFB did NOT, in fact, have a castle.&quot;,&quot;You are &#39;Bark&#39;ing up the wrong tree, Dale!&quot;,&quot;That base is in Dayton, Ohio, right Pat?&quot;,&quot;Didn&#39;t Warner Robins produce the Bugs Bunny cartoons?&quot;,&quot;I have found paradise, and it is McConnell AFB&quot;,&quot;Will the Space Force Academy have Space Cadets?&quot;))
+(set: &quot;Nowhere&quot; of $clueDataMap to _tmparray)
 (set: $ClueArray to (a:))
 }</tw-passagedata><tw-passagedata pid="111" name="Untitled Passage" tags="" position="1233,580" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="112" name="Great Job" tags="" position="243,1699" size="100,100">You just got a text message from Col Gates:
 
@@ -998,7 +1008,7 @@ This game was built to teach various systems engineering principles, including:
 This game is meant for a junior engineer, because it presents a wide breadth of topics having limited depth. The &quot;hub-spoke&quot; game design would allow additional cities to be added covering additional topics. Also, the depth of the game could be easily extended by requiring the player to drill further into the tasks presented in each city. Adding depth and breadth would require minimal changes to the Twine/Harlowe navigation mechanics employed in our game.
 
 &#39;&#39;End User License Agreement&#39;&#39;:
-The user of this game, referred to herein as //the player// agrees to assign only high ratings to this game in the SENG 670 evaluation rubric. If //the player// asigns a low rating in any category, //Summer 2021 Group 8// reserves the right to cancel your account and deny you access to our obviously awesome game.
+The user of this game, referred to herein as //the player// agrees to assign only high ratings to this game in the SENG 670 evaluation rubric. If //the player// assigns a low rating in any category, //Summer 2021 Group 8// reserves the right to cancel your account and deny you access to our obviously awesome game.
 
 This game comes with no warranty, expressed or implied.
 
@@ -1010,7 +1020,7 @@ Group 8 Enterprises
 George Town, Cayman Islands
 
 Back to the game!
-[[Where in the SPO?]] </tw-passagedata></tw-storydata>
+[[Where in the SPO?]] </tw-passagedata><tw-passagedata pid="116" name="No Back" tags="" position="616.3333333333333,1310.8333333333335" size="100,100">(replace: ?sidebar)[] &lt;!-- This passage removes the back arrow button --&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
